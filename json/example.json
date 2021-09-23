@@ -1,0 +1,75 @@
+{
+    "nodes": [{
+
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "天津国恒铁路控股股份有限公司",
+            "radius": 20,
+            "time": 1995,
+            "level": "B",
+            "grades": 81,
+            "lead_name": [
+                "邓小壮",
+                "齐新明",
+                "马海东",
+                "俞辉",
+                "张春雷",
+                "尤明奇"
+            ],
+            "touzi": [
+                "湖南欣录园林有限公司",
+                "湖南港泰渔业有限公司",
+                "渑池县仰韶大峡谷旅游开发有限公司",
+                "天津国恒铁路控股股份有限公司深圳分公司",
+                "中兴黄河白天鹅生态文化有限公司",
+                "广东国恒铁路物资有限公司",
+                "湖南省台鼎燃料有限公司",
+                "湖南雪峰山森林公园投资管理有限公司",
+                "天津巨翼投资咨询有限公司",
+                "甘肃酒航铁路有限公司",
+                "上海国国际贸易有限公司",
+                "中铁(罗定)铁路有限麦任公司",
+                "黑龙江国恒矿业有限公司"
+            ],
+            "A-taxpayer": 0,
+            "cuntoms": 0,
+            "road": 0,
+            "administrative-licence": 0,
+            "abnormal": 0,
+            "dishonest": 16,
+            "arrears-farmers": 0,
+            "tax-violation": 0,
+            "production-blacklist": 0,
+            "administrative-sanction": 0,
+            "water": 0,
+            "dishonest-blacklist": 0,
+            "fiance": [{
+                    "year": 2016,
+                    "turnover": 988.65,
+                    "net-profit": -242400,
+                    "total-assets": 519377,
+                    "cash-flow": 5783,
+                    "loan": 456600
+                },
+                {
+                    "year": 2017,
+                    "turnover": 863.15,
+                    "net-profit": -3532,
+                    "total-assets": 519377,
+                    "cash-flow": 6782,
+                    "loan": 456100
+                },
+                {
+                    "year": 2018,
+                    "turnover": 143.87,
+                    "net-profit": -172100,
+                    "total-assets": 519377,
+                    "cash-flow": 3422,
+                    "loan": 454900
+                }
+            ]
+        }
+
+
+    ]
+}

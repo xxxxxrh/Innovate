@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body style="height: 100%; margin: 0">
+    <!-- <div id="Cotainer" style="height: 100%;width: 1000px;"> -->
+
+        <div id="graphChart" style="height: 550px;width: 550px;border: solid orange;"></div>
+
+    <!-- </div> -->
+
+
+    <script type="text/javascript">
+        var companyGraph = document.getElementById("graphChart");
+        var companyChart = echarts.init(companyGraph);
+
+        var companyOption;
+        var clickData = {};
+        // ROOT_PATH = "https://echarts.apache.org/examples"
+
+        companyChart.showLoading();
+        $.getJSON('json/lypData.json', function (graph,error) {
+            console.log(error);
+            companyChart.hideLoading();
+
+            graph.nodes.forEach(function (node) {
+                node.label = {
+                    show: node.symbolSize > 30
+                };
+            });
+            companyOption = {
+                // 标题
+                /*
+                title: {
+                    text: '企业关系图',
+                    subtext: 'Default layout',
+                    top: 'bottom',
+                    left: 'right'
+                },
+
+                // 鼠标悬浮窗
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function (params) {
+                        if (params.data.more) {
+                            tip = ''
+                            tip = '成立时间：' + params.data.more.CLdata + '<br>' +
+                                '注册基金：' + params.data.more.ZhuCeMoney + '<br>'
+                            return tip
+                        }
+                        else {
+                            tip = ''
+                            tip = "无内容"
+                            return tip
+                        }
+                    }
+
+                },
+                */
+                /*
+                // 正上方图例
+                legend: [{
+                    // selectedMode: 'single',
+                    data: graph.categories.map(function (a) {
+                        // 返回企业种类
+                        return a.name;
+                    })
+                }],
+                */
+
+                toolbox: {
+                    show: true,
+                    orient: 'vertical',
+                    left: 'right',
+                    top: 'top',
+                    feature: {
+                        myTool1: {    //必须要my开头
+                            show: true,
+                            title: '返回',
+                            iconStyle: {
+                                borderColor: '#707070'
+                            },
+                            icon: 'path://M262.9 174.1h526v-110h-636v895.6h636v-110h-526z M706.5 774.6L929 506 706.1 248.3l-83.2 72 113.9 131.6H365.1v120h366.4L621.8 704.4z',
+                            onclick: function () {
+                                alert('myToolHandler1')
+                            }
+                        },
+                    }
+                },
+                animationDuration: 1500,
+                animationEasingUpdate: 'quinticInOut',
+                series: [
+                    {
+                        type: 'graph',
+                        layout: 'force',
+                        data: graph.nodes, // 企业数据
+                        links: graph.links, // 企业关系
+                        categories: graph.categories, // 企业种类
+                        roam: true,
+                        // 圆形上文字样式
+                        // label: {
+                        //     position: 'right',
+                        //     formatter: '{b}'
+                        // },
+                        lineStyle: {
+                            // 关系图连接线颜色
+                            color: '#000',
+                            curveness: 0.3
+                        },
+                        //鼠标移入动态的时候显示的默认样式
+                        emphasis: {
+                            focus: 'adjacency',
+                            lineStyle: {
+                                width: 3
+                            }
+                        },
+                        borderColor: "#FF1493",  //边框颜色
+                        borderWidth: 2, //边框线宽
+                        force: {
+                            repulsion: 500
+                        }
+                    }
+                ]
+            };
+
+
+            if (companyOption && typeof companyOption === 'object') {
+                companyChart.setOption(companyOption);
+            }
+        });
+
+    </script>
+</body>
+
+<style>
+
+</style>
+
+</html>

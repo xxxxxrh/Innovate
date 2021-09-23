@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四川赛</title>
+    <link href="pic/favicon.ico" rel="shortcut icon">
+
+</head>
+
+<body>
+    <!--  -->
+    <div class="container">
+        <!-- 标题开始 -->
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <h3 class="text-center">
+                    企业信用预警系统
+                </h3>
+            </div>
+        </div>
+        <!-- 标题结束 -->
+        <!-- 内容块 -->
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="row clearfix">
+                    <!-- 左侧块开始 -->
+                    <div class="col-md-3 column">
+                        <div class="row clearfix">
+                            <!-- 左上角 -->
+                            <div class="col-md-12 column">
+                                <!-- 经营动态柱状图 -->
+                                <div id="barLabel" style="width: 450px;height: 300px"></div>
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                            <!-- 左中 -->
+                            <div>
+                                <span>
+                                    <p style="font-size: 16px;text-align:left;text-indent: 15px;">企业资产分布图</p>
+                                </span>
+                            </div>
+                            <div class="col-md-10 column" id="pieChart" style="width: 100%;height: 230px;width: 360px;">
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                            <!-- 左下 -->
+                            <div class="col-md-12 column">
+                                <span>
+                                    <p style="font-size: 18px;text-align:left">企业新闻词云</p>
+                                </span>
+                                <div id="wordCloud" style="width: 100%; height: 300px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 左侧块结束 -->
+                    <!-- 中间块开始 -->
+                    <div class="col-md-6 column">
+                        <div class="row clearfix">
+                            <!-- 总关系图-->
+                            <div class="col-md-12 column" id="graphChart" style="width: 100%;height: 650px;"></div>
+
+                            <!-- 公司具体关系图 -->
+                            <div class="col-md-12 column" id="graphCompany"
+                                style="width: 100%;height: 650px; display: none;"></div>
+                                <div style="float: right;">
+                                    <button id="btn1" onclick="changGraph1()">信用预警</button>
+                                    <button id="btn2" onclick="changGraph2()">企业类型</button>
+                                </div>
+                        </div>
+                        <div class="row clearfix">
+                            <!-- 营业额折线图 -->
+                            <div class="col-md-12 column" id="lineStack" style="width: 900px;height: 230px;"></div>
+                            <!-- 堆叠柱状图 + 折线图 -->
+                            <div class="col-md-12 column" id="lineWithBar"
+                                style="width: 900px;height: 230px;display: none"></div>
+                        </div>
+                    </div>
+                    <!-- 中间块结束 -->
+                    <!-- 右侧块开始 -->
+                    <div class="col-md-3 column">
+
+                        <!-- 右上开始 -->
+                        <!-- 企业投资关系图 -->
+
+
+                        <div class="row clearfix">
+                            <!-- 搜索框 开始 -->
+                            <div class="rightTopcontainer">
+                                <div class="search">
+                                    <input type="text" class="input_search" id="inputKey" placeholder="请输入公司名称" />
+                                    <ul id="datalist" class="input_suggest">
+                                    </ul>
+                                </div>
+                                <!-- 公司的详情信息 -->
+                                <div class="detailedTable">
+                                    <div class="row clearfix rowdetailedTable">
+                                        <div class="col-md-4 column">
+
+                                            <button class="btn " data-toggle="modal"
+                                                data-target="#companyInformation">
+                                                企业基本信息
+                                            </button>
+                                        </div>
+                                        <div class="col-md-4 column">
+
+                                            <button class="btn " data-toggle="modal"
+                                                data-target="#fineModal" id="AtaxpayerBtn">
+                                                A 级纳税人<span class="badge" id="Ataxpayer">0</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-4 column">
+
+                                            <button class="btn " data-toggle="modal"
+                                                data-target="#fineModal" id="cuntomsBtn">
+                                                海关认证企业<span class="badge" id="cuntoms">0</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix rowdetailedTable">
+                                        <div class="col-md-4 column">
+
+                                            <button class="btn " data-toggle="modal"
+                                                data-target="#fineModal" id="administrativeLicenceBtn">
+                                                行政许可<span class="badge" id="administrativeLicence">0</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-4 column">
+
+                                            <button class="btn    " data-toggle="modal"
+                                                data-target="#fineModal" id="administrativeSanctionBtn">
+                                                行政处罚<span class="badge" id="administrativeSanction">0</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-4 column">
+
+                                            <button class="btn" data-toggle="modal"
+                                                data-target="#fineModal" id="taxViolationtBtn">
+                                                税收违法案件<span class="badge" id="taxViolation">0</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix rowdetailedTable">
+                                        <div class="col-md-4 column">
+
+                                            <button class="btn" data-toggle="modal"
+                                                data-target="#fineModal" id="arrearsFarmersBtn">
+                                                拖欠农民工工资<span class="badge" id="arrearsFarmers">0</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-4 column">
+
+                                            <button class="btn" data-toggle="modal"
+                                                data-target="#fineModal" id="dishonestBtn">
+                                                失信被执行人<span class="badge" id="dishonest">0</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-4 column">
+
+                                            <button class="btn" data-toggle="modal"
+                                                data-target="#fineModal" id="waterBtn">
+                                                水电缴费 <span class="badge" id="water">0</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 搜索框 结束 -->
+                            <!-- <div id="heatMapChart" style="width: 500px;height: 350px"></div> -->
+                            <!-- 企业基本信息 开始 -->
+                            <div class="modal fade" id="companyInformation"I tabindex="-1" role="dialog"
+                                aria-labelledby="companyInformation" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                &times;
+                                            </button>
+                                            <h4 class="modal-title" id="companyInformationLabel">
+                                                企业基本信息
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <table id="tfModalTableHover" class="tfModalTable" border="1">
+                                                <tr>
+                                                    <th>数据项 1</th>
+                                                    <th>数据</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>企业名称</td>
+                                                    <td>天津国恒铁路控股股份有限公司</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>法定代表人</td>
+                                                    <td>邓小壮</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>注册资本</td>
+                                                    <td>519377.1892万元人民币</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>成立时间</td>
+                                                    <td>1995-04-30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>企业类型</td>
+                                                    <td>股份有限公司（上市）</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>登记状态</td>
+                                                    <td>存续</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>注册地址</td>
+                                                    <td>天津自贸试验区(空港经济区)西三道166号A3区224室
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>统一社会信用代码</td>
+                                                    <td>911201161141216958</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 企业基本信息 结束 -->
+
+                            <!-- 失信信息 开始 -->
+                            <div class="modal fade" id="fineModal"I tabindex="-1" role="dialog"
+                                aria-labelledby="fineModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                &times;
+                                            </button>
+                                            <h4 class="modal-title" id="fineModalLabel">
+                                                行政处罚
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <table id="tfModalTableHover" class="tfModalTable" border="1">
+                                                <tr>
+                                                    <th>案号</th>
+                                                    <th>执行法院</th>
+                                                    <th>执行依据文号</th>
+                                                    <th>履行情况</th>
+                                                    <th>失信行为</th>
+                                                    <th>涉案金额</th>
+                                                    <th>立案日期</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>（2018）苏执38号</td>
+                                                    <td>江苏省高级人民法院</td>
+                                                    <td>（2012）苏商初字第0010号</td>
+                                                    <td>全部未履行</td>
+                                                    <td>其他妨碍、抗拒执行,其他规避执行</td>
+                                                    <td>493685599</td>
+                                                    <td>2018-10-17</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>（2019）皖0221执536号
+                                                    </td>
+                                                    <td>芜湖县人民法院
+                                                    </td>
+                                                    <td>（2014）芜中民二终字第00110号
+                                                    </td>
+                                                    <td>全部未履行</td>
+                                                    <td>有履行能力而拒不履行生效法律文书确定义务
+                                                    </td>
+                                                    <td>1500000
+                                                    </td>
+                                                    <td>2019-03-04
+                                                    </td>
+                                                </tr> 
+                                                <tr>
+                                                    <td>（2016）津0104执3272号</td>
+                                                    <td>天津市南开区人民法院</td>
+                                                    <td>（2015）南民初字第4407号</td>
+                                                    <td>全部未履行</td>
+                                                    <td>其他有履行能力而拒不履行生效法律文书确定义务的</td>
+                                                    <td>-</td>
+                                                    <td>2016-11-10</td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>（2016）津0104执3268号</td>
+                                                    <td>天津市南开区人民法院</td>
+                                                    <td>（2015）南民初字第4406号</td>
+                                                    <td>全部未履行</td>
+                                                    <td>其他有履行能力而拒不履行生效法律文书确定义务的</td>
+                                                    <td>-</td>
+                                                    <td>2016-11-10</td>
+                                                </tr>
+                                                
+                                            </table>
+                                            <div class="row">
+                                                <div class="col-md-4"></div>
+                                                <div class="col-md-5 col-md-offset-3">
+                                                    <nav aria-label="Page navigation" style="margin-right: 20px">
+                                                        <ul class="pagination">
+                                                          <li>
+                                                            <a href="#" aria-label="Previous">
+                                                              <span aria-hidden="true">&laquo;</span>
+                                                            </a>
+                                                          </li>
+                                                          <li><a href="#">1</a></li>
+                                                          <li><a href="#">2</a></li>
+                                                          <li><a href="#">3</a></li>
+                                                          <li><a href="#">4</a></li>
+                                                          <li>
+                                                            <a href="#" aria-label="Next">
+                                                              <span aria-hidden="true">&raquo;</span>
+                                                            </a>
+                                                          </li>
+                                                        </ul>
+                                                      </nav>
+                                                </div>
+                                              </div>
+                                            
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 失信信息 -->
+                        </div>
+                        <!-- 右上结束 -->
+                        <!-- 右中开始 -->
+                        <div class="row clearfix">
+
+
+                            <!-- 企业详细缩略图 -->
+                            <div class="col-md-12 column">
+                                <div id="detailedGraphChart" style="width: 100%;height: 200px"></div>
+                            </div>
+
+                        </div>
+                        <div class="row clearfix">
+
+
+                            <span>
+                                <p style="font-size: 16px;text-align:left;text-indent: 15px;">企业投资关系图</p>
+                            </span>
+                            <div class="col-md-12 column" id="sankeyChart" style="width: 450px;height: 300px"></div>
+
+                        </div>
+                        <!-- 右中结束 -->
+                        <!-- 右下开始 -->
+                        <div class="row clearfix">
+                            <div class="col-md-12 column">
+                                <div class="text-center">
+                                    <h4>企业新闻舆情</h4>
+                                </div>
+
+                                <div class="newsText">
+                                    <ul id="newsList">
+                                        <li class="newsTitle">
+                                            <p><span>广东最“诡异”的一条铁路,修了11年,还没修好,如今复工有望!
+                                            </span><span
+                                                    style="float: right;color: rgb(255, 238, 0);">中立</span></p>
+                                        </li>
+                                        <li class="newsTitle">
+                                            <p><span>天津国恒铁路控股股份有限公司破产重整案
+                                            </span><span
+                                                    style="float: right;color: rgb(236, 35, 35);">负面</span></p>
+                                        </li>
+                                        <li class="newsTitle">
+                                            <p><span>喊话国恒铁路实控人
+                                            </span><span
+                                                    style="float: right;color: rgb(236, 35, 35);">负面</span></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 右下开始 -->
+                    </div>
+                    <!-- 右侧块开始 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 引入 Jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+
+
+    <!-- 引入 d3 -->
+    <script src="js/d3.v3.min.js"></script>
+    <!-- 引入悬浮窗 -->
+    <script src="js/d3-tip.js"></script>
+    <!-- 引入词云 -->
+    <script src="js/d3.layout.cloud.js"></script>
+    <!-- 引入 echaers -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <!-- 必须最后引入核心 js -->
+    <script type="text/javascript" src="js/graphD3.js"></script>
+
+    <!-- 表格悬浮样式改变 -->
+    <script type="text/javascript">
+        window.onload = function () {
+            var tfrow = document.getElementById('tfModalTableHover').rows.length;
+            var tbRow = [];
+            for (var i = 1; i < tfrow; i++) {
+                tbRow[i] = document.getElementById('tfModalTableHover').rows[i];
+                tbRow[i].onmouseover = function () {
+                    this.style.backgroundColor = '#f3f8aa';
+                };
+                tbRow[i].onmouseout = function () {
+                    this.style.backgroundColor = '#ffffff';
+                };
+            }
+        };
+    </script>
+</body>
+<!-- 表格悬浮样式 -->
+<style type="text/css">
+    table.tfModalTable {
+        font-size: 12px;
+        color: #333333;
+        width: 100%;
+        border-width: 1px;
+        border-color: #729ea5;
+        border-collapse: collapse;
+    }
+
+    table.tfModalTable th {
+        font-size: 12px;
+        background-color: #acc8cc;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #729ea5;
+        text-align: left;
+    }
+
+    table.tfModalTable tr {
+        background-color: #ffffff;
+    }
+
+    table.tfModalTable td {
+        font-size: 12px;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #729ea5;
+    }
+</style>
+<!-- 搜索框样式 -->
+<style>
+    .rightTopcontainer {
+        width: 100%;
+        height: 200px;
+    }
+
+    .detailedTable {
+        padding-top: 40px;
+    }
+
+    .rowdetailedTable {
+        padding-top: 10px;
+    }
+
+    .search {
+        position: absolute;
+        z-index: 99;
+    }
+
+    .search .input_search {
+        font-size: 16px;
+        position: relative;
+        text-align: left;
+        text-indent: 5px;
+        width: 350px;
+        height: 25px;
+        border: 1px solid rgb(126, 126, 126);
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        /* background: rgba(0, 209, 112, 0.527); */
+    }
+
+    .search .input_search:focus {
+        outline: none;
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border: 1px solid rgb(24, 24, 24);
+
+
+    }
+
+    .search ul {
+        position: absolute;
+        display: block;
+        text-align: left;
+        width: 200px;
+        margin-top: 0px;
+        padding: 0;
+        list-style-type: none;
+        border: 1px solid rgb(24, 24, 24);
+        border-top: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        
+    }
+    
+    .search li {
+        background-color: rgba(235, 235, 235, 0.815);
+        padding-top: 5px;
+        padding-bottom: 2px;
+        margin: 0;
+        text-align: left;
+        text-indent: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .search li:hover {
+        background: rgb(241, 241, 241);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .search a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #detailedGraphChart {
+
+        position: relative;
+    }
+</style>
+<style>
+    #wordCloud {
+        margin-left: 0px;
+    }
+
+    #barLabel {
+        height: 300px;
+        width: 200px;
+    }
+
+    ul li {
+        list-style: none
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    /* Tooltip CSS */
+    .d3-tip {
+        line-height: 1.5;
+        font-weight: 400;
+        font-family: "avenir next", Arial, sans-serif;
+        padding: 6px;
+        /* 悬浮窗背景颜色 */
+        background: rgba(253, 250, 250, 0.226);
+        /* 属性颜色 */
+        color: #252525;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #5555557c;
+        pointer-events: none;
+    }
+</style>
+
+</html>
+
+<!--
+    输入框与知识图谱交互。
+    时变
+ -->

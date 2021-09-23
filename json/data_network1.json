@@ -1,0 +1,1580 @@
+{
+    "nodes": [
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "力诚国际贸易股份有限公司",
+            "radius": 44,
+            "time": 2001,
+            "level": "B",
+            "grades": 81
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "四川欣浩投资有限公司",
+            "radius": 20,
+            "time": 2011,
+            "level": "F",
+            "grades": 22
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "四川力诚百货股份有限公司广州第二分公司",
+            "radius": 24,
+            "time": 2009,
+            "level": "B",
+            "grades": 89
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "成都尚美轩餐饮管理有限公司",
+            "radius": 16,
+            "time": 2007,
+            "level": "F",
+            "grades": 39
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "成都鸿泰成商贸有限公司",
+            "radius": 15,
+            "time": 2012,
+            "level": "F",
+            "grades": 3
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "B",
+            "radius": 22,
+            "time": 2019,
+            "level": "E",
+            "grades": 55
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "C",
+            "radius": 19,
+            "time": 2010,
+            "level": "A",
+            "grades": 98
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "D",
+            "radius": 25,
+            "time": 2020,
+            "level": "F",
+            "grades": 9
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "E",
+            "radius": 7,
+            "time": 2001,
+            "level": "F",
+            "grades": 8
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "F",
+            "radius": 6,
+            "time": 2015,
+            "level": "B",
+            "grades": 88
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "G",
+            "radius": 10,
+            "time": 2004,
+            "level": "D",
+            "grades": 69
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "H",
+            "radius": 11,
+            "time": 1999,
+            "level": "C",
+            "grades": 77
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "I",
+            "radius": 26,
+            "time": 2014,
+            "level": "E",
+            "grades": 57
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "J",
+            "radius": 21,
+            "time": 2017,
+            "level": "E",
+            "grades": 52
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "K",
+            "radius": 36,
+            "time": 2009,
+            "level": "F",
+            "grades": 42
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "L",
+            "radius": 10,
+            "time": 2004,
+            "level": "F",
+            "grades": 17
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "M",
+            "radius": 17,
+            "time": 1999,
+            "level": "A",
+            "grades": 98
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "N",
+            "radius": 11,
+            "time": 2014,
+            "level": "F",
+            "grades": 41
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "O",
+            "radius": 16,
+            "time": 2017,
+            "level": "B",
+            "grades": 89
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "P",
+            "radius": 33,
+            "time": 2009,
+            "level": "F",
+            "grades": 48
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "Q",
+            "radius": 9,
+            "time": 2009,
+            "level": "F",
+            "grades": 40
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "R",
+            "radius": 7,
+            "time": 2017,
+            "level": "F",
+            "grades": 30
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "S",
+            "radius": 23,
+            "time": 2009,
+            "level": "C",
+            "grades": 76
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "T",
+            "radius": 12,
+            "time": 2009,
+            "level": "F",
+            "grades": 15
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "ingo",
+            "radius": 22,
+            "time": 2010,
+            "level": "A",
+            "grades": 92
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "mhrc",
+            "radius": 17,
+            "time": 2009,
+            "level": "F",
+            "grades": 26
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "lzie",
+            "radius": 45,
+            "time": 1993,
+            "level": "F",
+            "grades": 1
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "mthz",
+            "radius": 11,
+            "time": 1991,
+            "level": "E",
+            "grades": 51
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "egoi",
+            "radius": 39,
+            "time": 2020,
+            "level": "F",
+            "grades": 14
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "doqj",
+            "radius": 37,
+            "time": 1990,
+            "level": "F",
+            "grades": 5
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "vaqz",
+            "radius": 42,
+            "time": 2012,
+            "level": "D",
+            "grades": 62
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "azqm",
+            "radius": 16,
+            "time": 1998,
+            "level": "E",
+            "grades": 57
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "vkdr",
+            "radius": 13,
+            "time": 1990,
+            "level": "D",
+            "grades": 66
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "hxwq",
+            "radius": 10,
+            "time": 2011,
+            "level": "F",
+            "grades": 20
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "qmhl",
+            "radius": 36,
+            "time": 1991,
+            "level": "F",
+            "grades": 22
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "egbz",
+            "radius": 25,
+            "time": 2014,
+            "level": "F",
+            "grades": 4
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "srew",
+            "radius": 7,
+            "time": 2006,
+            "level": "F",
+            "grades": 5
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "fsmf",
+            "radius": 33,
+            "time": 1992,
+            "level": "A",
+            "grades": 96
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "xsqm",
+            "radius": 22,
+            "time": 2017,
+            "level": "B",
+            "grades": 86
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "iyus",
+            "radius": 35,
+            "time": 1999,
+            "level": "E",
+            "grades": 57
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "zbyh",
+            "radius": 43,
+            "time": 2006,
+            "level": "F",
+            "grades": 39
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "exts",
+            "radius": 15,
+            "time": 2000,
+            "level": "F",
+            "grades": 19
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "kkne",
+            "radius": 25,
+            "time": 1993,
+            "level": "F",
+            "grades": 31
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "ooar",
+            "radius": 43,
+            "time": 1993,
+            "level": "E",
+            "grades": 51
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "jgal",
+            "radius": 11,
+            "time": 2002,
+            "level": "D",
+            "grades": 64
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "fofl",
+            "radius": 27,
+            "time": 1991,
+            "level": "F",
+            "grades": 33
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "zgvj",
+            "radius": 5,
+            "time": 2001,
+            "level": "A",
+            "grades": 93
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "nult",
+            "radius": 27,
+            "time": 2004,
+            "level": "A",
+            "grades": 96
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "auqg",
+            "radius": 25,
+            "time": 2020,
+            "level": "D",
+            "grades": 66
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "cmck",
+            "radius": 44,
+            "time": 2010,
+            "level": "F",
+            "grades": 0
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "atau",
+            "radius": 1,
+            "time": 1998,
+            "level": "F",
+            "grades": 38
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "llfj",
+            "radius": 16,
+            "time": 2002,
+            "level": "F",
+            "grades": 41
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "ormw",
+            "radius": 35,
+            "time": 2008,
+            "level": "F",
+            "grades": 44
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "texx",
+            "radius": 13,
+            "time": 2012,
+            "level": "F",
+            "grades": 9
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "yxzk",
+            "radius": 6,
+            "time": 2017,
+            "level": "A",
+            "grades": 92
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "afav",
+            "radius": 5,
+            "time": 1999,
+            "level": "F",
+            "grades": 18
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "kfam",
+            "radius": 28,
+            "time": 2017,
+            "level": "F",
+            "grades": 45
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "ixox",
+            "radius": 40,
+            "time": 2018,
+            "level": "F",
+            "grades": 48
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "jrqn",
+            "radius": 15,
+            "time": 1998,
+            "level": "F",
+            "grades": 46
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "qrhd",
+            "radius": 40,
+            "time": 1991,
+            "level": "F",
+            "grades": 30
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "rbog",
+            "radius": 18,
+            "time": 2001,
+            "level": "B",
+            "grades": 88
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "ngjx",
+            "radius": 5,
+            "time": 2003,
+            "level": "B",
+            "grades": 83
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "gbga",
+            "radius": 22,
+            "time": 1992,
+            "level": "F",
+            "grades": 40
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "vjbk",
+            "radius": 26,
+            "time": 2018,
+            "level": "F",
+            "grades": 21
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "jake",
+            "radius": 19,
+            "time": 2006,
+            "level": "F",
+            "grades": 5
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "sppa",
+            "radius": 19,
+            "time": 1996,
+            "level": "F",
+            "grades": 32
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "dndt",
+            "radius": 17,
+            "time": 1991,
+            "level": "F",
+            "grades": 41
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "hkwy",
+            "radius": 38,
+            "time": 1995,
+            "level": "F",
+            "grades": 18
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "dxyr",
+            "radius": 22,
+            "time": 1997,
+            "level": "F",
+            "grades": 26
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "pjvi",
+            "radius": 37,
+            "time": 2014,
+            "level": "B",
+            "grades": 82
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "zxzk",
+            "radius": 3,
+            "time": 2007,
+            "level": "C",
+            "grades": 70
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "rwzz",
+            "radius": 22,
+            "time": 2016,
+            "level": "E",
+            "grades": 51
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "gsaa",
+            "radius": 11,
+            "time": 2017,
+            "level": "B",
+            "grades": 85
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "mczc",
+            "radius": 9,
+            "time": 2010,
+            "level": "F",
+            "grades": 7
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "pzgc",
+            "radius": 35,
+            "time": 1999,
+            "level": "B",
+            "grades": 80
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "gjln",
+            "radius": 15,
+            "time": 2000,
+            "level": "F",
+            "grades": 19
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "ltre",
+            "radius": 7,
+            "time": 2005,
+            "level": "F",
+            "grades": 18
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "qwyi",
+            "radius": 34,
+            "time": 2002,
+            "level": "A",
+            "grades": 92
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "bxwx",
+            "radius": 16,
+            "time": 1999,
+            "level": "D",
+            "grades": 68
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "abcu",
+            "radius": 6,
+            "time": 2018,
+            "level": "A",
+            "grades": 97
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "flva",
+            "radius": 36,
+            "time": 1992,
+            "level": "A",
+            "grades": 97
+        },
+        {
+            "group": 1,
+            "categories": "独资企业",
+            "name": "brso",
+            "radius": 42,
+            "time": 2007,
+            "level": "A",
+            "grades": 96
+        },
+        {
+            "group": 5,
+            "categories": "国有企业",
+            "name": "gsdh",
+            "radius": 26,
+            "time": 2014,
+            "level": "F",
+            "grades": 39
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "sosj",
+            "radius": 6,
+            "time": 1997,
+            "level": "A",
+            "grades": 92
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "zmev",
+            "radius": 14,
+            "time": 2004,
+            "level": "F",
+            "grades": 20
+        },
+        {
+            "group": 6,
+            "categories": "集体所有",
+            "name": "mjxf",
+            "radius": 40,
+            "time": 2012,
+            "level": "B",
+            "grades": 89
+        },
+        {
+            "group": 4,
+            "categories": "国有企业",
+            "name": "gepi",
+            "radius": 2,
+            "time": 1992,
+            "level": "C",
+            "grades": 72
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "jikp",
+            "radius": 36,
+            "time": 2009,
+            "level": "B",
+            "grades": 80
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "kyqo",
+            "radius": 18,
+            "time": 2011,
+            "level": "D",
+            "grades": 62
+        },
+        {
+            "group": 5,
+            "categories": "股份制企业",
+            "name": "kpyz",
+            "radius": 31,
+            "time": 1995,
+            "level": "C",
+            "grades": 72
+        },
+        {
+            "group": 2,
+            "categories": "合资企业",
+            "name": "zaqq",
+            "radius": 23,
+            "time": 2004,
+            "level": "B",
+            "grades": 85
+        },
+        {
+            "group": 3,
+            "categories": "私营企业",
+            "name": "jcgn",
+            "radius": 38,
+            "time": 2018,
+            "level": "A",
+            "grades": 97
+        }
+    ],
+    "categories": [
+        {
+            "categories": "独资企业",
+            "group": 1
+        },
+        {
+            "categories": "合资企业",
+            "group": 2
+        },
+        {
+            "categories": "私营企业",
+            "group": 3
+        },
+        {
+            "categories": "国有企业",
+            "group": 4
+        },
+        {
+            "categories": "股份制企业",
+            "group": 5
+        },
+        {
+            "categories": "集体所有",
+            "group": 6
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 0,
+            "target": 2,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 0,
+            "target": 3,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 0,
+            "target": 4,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 3,
+            "target": 4,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 8,
+            "target": 3,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 4,
+            "target": 9,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 5,
+            "target": 7,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 52,
+            "target": 13,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 10,
+            "target": 9,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 15,
+            "target": 33,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 14,
+            "target": 6,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 8,
+            "target": 13,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 17,
+            "target": 12,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 1,
+            "target": 10,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 5,
+            "target": 11,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 15,
+            "target": 4,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 18,
+            "target": 13,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 14,
+            "target": 19,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 15,
+            "target": 17,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 90,
+            "target": 78,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 33,
+            "target": 49,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 26,
+            "target": 10,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 52,
+            "target": 25,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 78,
+            "target": 34,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 48,
+            "target": 78,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 7,
+            "target": 61,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 49,
+            "target": 21,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 15,
+            "target": 46,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 6,
+            "target": 71,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 6,
+            "target": 5,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 55,
+            "target": 63,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 12,
+            "target": 79,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 6,
+            "target": 78,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 75,
+            "target": 31,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 32,
+            "target": 16,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 11,
+            "target": 43,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 61,
+            "target": 52,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 26,
+            "target": 79,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 52,
+            "target": 34,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 52,
+            "target": 50,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 78,
+            "target": 41,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 37,
+            "target": 5,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 19,
+            "target": 71,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 16,
+            "target": 29,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 35,
+            "target": 69,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 65,
+            "target": 45,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 14,
+            "target": 62,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 58,
+            "target": 46,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 54,
+            "target": 22,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 69,
+            "target": 21,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 82,
+            "target": 76,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 9,
+            "target": 79,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 24,
+            "target": 13,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 40,
+            "target": 64,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 20,
+            "target": 10,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 19,
+            "target": 78,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 79,
+            "target": 17,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 19,
+            "target": 46,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 52,
+            "target": 70,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 32,
+            "target": 11,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 50,
+            "target": 33,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 24,
+            "target": 78,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 70,
+            "target": 13,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 74,
+            "target": 4,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 73,
+            "target": 70,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 73,
+            "target": 78,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 21,
+            "target": 9,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 29,
+            "target": 13,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 66,
+            "target": 33,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 22,
+            "target": 12,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 17,
+            "target": 67,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 90,
+            "target": 57,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 32,
+            "target": 17,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 30,
+            "target": 67,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 78,
+            "target": 3,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 4,
+            "target": 46,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 11,
+            "target": 59,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 28,
+            "target": 75,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 25,
+            "target": 14,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 73,
+            "target": 32,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 35,
+            "target": 77,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 77,
+            "target": 5,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 39,
+            "target": 41,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 52,
+            "target": 5,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 39,
+            "target": 78,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 82,
+            "target": 26,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 61,
+            "target": 66,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 52,
+            "target": 14,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 61,
+            "target": 46,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 76,
+            "target": 40,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 57,
+            "target": 50,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 22,
+            "target": 69,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 51,
+            "target": 52,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 80,
+            "target": 75,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 48,
+            "target": 62,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 77,
+            "target": 45,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 74,
+            "target": 46,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 52,
+            "target": 39,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 25,
+            "target": 34,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 70,
+            "target": 53,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 69,
+            "target": 11,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 47,
+            "target": 39,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 47,
+            "target": 75,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 77,
+            "target": 24,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 16,
+            "target": 39,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 80,
+            "target": 55,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 57,
+            "target": 51,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 60,
+            "target": 45,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 3,
+            "target": 73,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 59,
+            "target": 47,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 22,
+            "target": 15,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 80,
+            "target": 55,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 25,
+            "target": 1,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 33,
+            "target": 54,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 11,
+            "target": 69,
+            "rela": "合伙",
+            "type": "resolved"
+        },
+        {
+            "source": 73,
+            "target": 22,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 65,
+            "target": 1,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 55,
+            "target": 25,
+            "rela": "投资",
+            "type": "resolved"
+        },
+        {
+            "source": 71,
+            "target": 13,
+            "rela": "投资",
+            "type": "resolved"
+        }
+    ]
+}

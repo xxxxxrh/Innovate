@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>graph D3</title>
+
+
+	<!-- 引入 d3 -->
+	<script src="js/d3.v3.min.js"></script>
+	<!-- 引入悬浮窗 -->
+	<script src="js/d3-tip.js"></script>
+</head>
+
+<!--
+	python 本地服务器
+	命令行 python -m http.server 8099
+	浏览器 http://localhost:8099/graphD3.html
+ -->
+
+<body>
+
+			<div>
+				<div id="graphChart"></div>
+			</div>
+
+
+
+
+	<!-- 引入 Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+		integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+		integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+		crossorigin="anonymous"></script>
+
+
+
+</body>
+<script>
+	// let col8_width = document.getElementById("col8").offsetWidth;
+	// console.log(col8_width);
+	let width = 1700;
+	// let width = col8_width * 0.95;
+	// let width = 800;
+	let height = 850;
+	let radius = 7;
+	// 颜色比例尺
+	var colorline = d3.scale.category10();
+
+	var force = d3.layout.force()
+		.gravity(.02)
+		.charge(-10)
+		.linkDistance(40)
+		.size([width, height])
+
+
+	var svg = d3.select("#graphChart").append("svg")
+		.attr("width", width)
+		.attr("height", height);
+	//箭头
+	var marker =
+		svg.append("marker")
+			// .attr("id", function(d) { return d; })
+			.attr("id", "resolved")
+			//.attr("markerUnits","strokeWidth")//设置为strokeWidth箭头会随着线的粗细发生变化
+			.attr("markerUnits", "userSpaceOnUse")
+			.attr("viewBox", "0 -5 10 10")//坐标系的区域
+			.attr("refX", 15)//箭头坐标
+			.attr("refY", -1)
+			.attr("markerWidth", 10)//标识的大小
+			.attr("markerHeight", 10)
+			.attr("orient", "auto")//绘制方向，可设定为：auto（自动确认方向）和 角度值
+			.attr("stroke-width", 2)//箭头宽度
+			.append("path")
+			.attr("d", "M0,-5L10,0L0,5")//箭头的路径
+			.attr('fill', '#000000');//箭头颜色
+	var searchCompanyName = [];
+	d3.json("json/lyp_network.json", function (error, graph) {
+		if (error) throw error;
+		graph.nodes.forEach(e => {
+			searchCompanyName.push(e.name)
+		});
+		// 连接线
+		var link = svg.selectAll("line")
+			.data(graph.links)
+			.enter()
+			.append("line")
+			.style("stroke-width", 1)//线条粗细
+			.style("stroke", function (d) {
+				return "#A9A9A9";
+			})
+			.attr("marker-end", "url(#resolved)");//根据箭头标记的id号标记箭头
+		// 圆圈 结点 
+		var node = svg.selectAll("circle")
+			.data(graph.nodes)
+			.enter().append("circle")
+			.attr("r", function (d) { return 7; })
+			.attr("id", function (d) { return d.name; })
+			// 圆圈颜色
+			.style("fill", d => colorline(d.group))
+			// 描边颜色
+			// .style("stroke", function (d) {
+			// 	return "#808080";
+			// })
+			.style("stroke-width", 3)//线条粗细
+			// 拖动事件
+			.call(force.drag)
+			// 点击事件
+			.on("click", function (d, i) {
+				let tempData = {
+					"nodes":[],
+					"links":[]
+				}
+
+				var newEle0 = document.getElementById("p0");
+				var newEle1 = document.getElementById("p1");
+				var newEle2 = document.getElementById("p2");
+				var newEle3 = document.getElementById("p3");
+				var newEle4 = document.getElementById("p4");
+				newEle0.innerHTML = "企业名称：" + d.name;  //innerText也可用
+				newEle1.innerHTML = "注册时间：" + d.time;  //innerText也可用
+				newEle2.innerHTML = "信用等级：" + d.level;  //innerText也可用
+				newEle3.innerHTML = "注册金额：" + d.radius + "万";  //innerText也可用
+				newEle4.innerHTML = "企业类型：" + d.categories;  //innerText也可用
+			})
+			.on("mouseover", function (d) {
+				tip.show(d); 	// 隐藏悬浮窗
+
+				focusNode0 = [];	// 获取和结点有关联的结点
+				// 改变连接线的透明度
+				link.style("opacity", function (line) {
+					if (line.source.name == d.name || line.target.name == d.name) {
+						// 将结点有关的结点姓名加入到数组中
+						focusNode0.push(line.source.name)
+						focusNode0.push(line.target.name)
+						return 1;
+					} else {
+						node.style("opacity", 0.1)
+						return 0.05;
+					}
+				});
+				// 数组去重
+				focusNode = Array.from(new Set(focusNode0));
+				// 改变圆圈的透明度
+				node.style("opacity", function (n) {
+					if (focusNode.indexOf(n.name) != -1) {
+						return 1
+					} else {
+						return 0.25
+					}
+				})
+				console.log(focusNode);
+				console.log(focusNode0);
+
+			})
+			.on("mouseout", function (d) {
+				tip.hide(d);	// 隐藏悬浮窗
+
+				// 将透明度改回正常值
+				node.style("opacity", 1)
+				link.style("opacity", 1)
+			});
+
+		force
+			.nodes(graph.nodes)
+			.links(graph.links)
+			.on("tick", tick)
+			.start();
+
+		// 添加悬浮窗 d3-tip
+		var tip = d3.tip()
+			.attr('class', 'd3-tip')
+			.offset([80, 110])
+			.html(function (d) {
+
+				return "<strong>公司名称：</strong><span class='details'>" + d.name + "<br></span>"
+					+ "<strong>注册时间：</strong><span class='details'>" + d.time + "<br></span>"
+					+ "<strong>信用等级：</strong><span class='details'>" + d.level + "<br></span>"
+					+ "<strong>注册金额：</strong><span class='details'>" + d.radius + "万<br></span>"
+					+ "<strong>企业类型：</strong><span class='details'>" + d.categories + "<br></span>"
+					;
+
+				// return "<strong>物价指数: </strong><span class='details'>" +   + "<br></span>" + "<strong>Confirmed: </strong><span class='details'>" + "xxrh" + "</span>";
+			});
+
+
+		svg.call(tip);
+
+
+		function tick() {
+			node.attr("cx", function (d) { return d.x = Math.max(d.radius, Math.min(width - radius, d.x)); })
+				.attr("cy", function (d) { return d.y = Math.max(d.radius, Math.min(height - radius, d.y)); });
+
+			link.attr("x1", function (d) { return d.source.x; })
+				.attr("y1", function (d) { return d.source.y; })
+				.attr("x2", function (d) { return d.target.x; })
+				.attr("y2", function (d) { return d.target.y; });
+		}
+	});
+
+
+	//定义一些数据
+
+	console.log("searchCompanyName");
+	console.log(searchCompanyName);
+
+	var ele_key = document.getElementById("key");
+	ele_key.onkeyup = function (e) {
+
+		var val = this.value;
+
+		//获取输入框里匹配的数据
+		var srdata = [];
+		for (var i = 0; i < searchCompanyName.length; i++) {
+			console.log(searchCompanyName[i].indexOf(val))
+			if (val.trim().length > 0 && searchCompanyName[i].indexOf(val) > -1) {
+				srdata.push(searchCompanyName[i]);
+			}
+		}
+
+		//获取到的数据准备追加显示, 前期要做的事情: 清空数据,然后显示数据列表,如果获取到的数据为空,则不显示
+		var ele_datalist = document.getElementById("datalist");
+		ele_datalist.style.visibility = "visible";
+		ele_datalist.innerHTML = "";
+
+		if (srdata.length == 0) {
+			ele_datalist.style.visibility = "hidden";
+		}
+
+		//将搜索到的数据追加到显示数据列表, 然后每一行加入点击事件, 点击后将数据放入搜索框内, 数据列表隐藏
+		var self = this;
+		for (var i = 0; i < srdata.length; i++) {
+			var ele_li = document.createElement("li");
+			var ele_a = document.createElement("a");
+			ele_a.textContent = srdata[i];
+
+			ele_li.onclick = function () {
+				self.value = this.textContent;
+				ele_datalist.style.visibility = "hidden";
+			}
+			ele_li.appendChild(ele_a);
+			ele_datalist.appendChild(ele_li);
+		}
+
+	}
+</script>
+<style>
+	.search .input_search {
+		font-size: 16px;
+		position: relative;
+		text-align: left;
+		text-indent: 5px;
+		width: 200px;
+		height: 25px;
+		border: 1px solid rgb(126, 126, 126);
+		border-radius: 5px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		/* background: rgba(0, 209, 112, 0.527); */
+	}
+
+	.search .input_search:focus {
+		outline: none;
+		border-radius: 5px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		border: 1px solid rgb(24, 24, 24);
+
+
+	}
+
+	.search ul {
+		position: absolute;
+		display: block;
+		text-align: left;
+		width: 200px;
+		margin-top: 0px;
+		padding: 0;
+		list-style-type: none;
+		border: 1px solid rgb(24, 24, 24);
+		border-top: none;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+
+	}
+
+	.search li {
+		padding-top: 5px;
+		padding-bottom: 2px;
+		margin: 0;
+		text-align: left;
+		text-indent: 5px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.search li:hover {
+		background: rgb(241, 241, 241);
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+	.search a {
+		text-decoration: none;
+		color: black;
+	}
+</style>
+<style>
+	#graphChart {
+		float: left;
+		Border: 1px solid #000
+	}
+
+	#graphTable {
+		height: 200px;
+		background-color: rgb(85, 202, 177);
+	}
+
+	/* Tooltip CSS */
+	.d3-tip {
+		line-height: 1.5;
+		font-weight: 400;
+		font-family: "avenir next", Arial, sans-serif;
+		padding: 6px;
+		/* 悬浮窗背景颜色 */
+		background: rgba(253, 250, 250, 0.86);
+		/* 属性颜色 */
+		color: #252525;
+		border-radius: 10px;
+		border-style: solid;
+		border-color: #555555;
+		pointer-events: none;
+	}
+
+	/* 数据文字的颜色 */
+	.details {
+		color: rgb(46, 46, 46);
+	}
+</style>

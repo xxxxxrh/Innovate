@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动搜索框</title>
+    <!-- 引入 Jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <button class="btn btn-primary  btn-sm " data-toggle="modal" data-target="#fineModal">
+        行政处罚<span class="badge">4</span>
+    </button>
+    <div class="modal fade" id="fineModal" tabindex="-1" role="dialog" aria-labelledby="fineModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="fineModalLabel">
+                        行政处罚
+                    </h4>
+                </div>
+                <div class="modal-body">
+
+                    <table id="tfModalTableHover" class="tfModalTable" border="1">
+                        <tr>
+                            <th>数据项 1</th>
+                            <th>数据</th>
+                        </tr>
+                        <tr>
+                            <td>Row:1 Cell:1</td>
+                            <td>Row:1 Cell:2</td>
+                        </tr>
+                        <tr>
+                            <td>Row:2 Cell:1</td>
+                            <td>Row:2 Cell:2</td>
+                        </tr>
+                        <tr>
+                            <td>Row:3 Cell:1</td>
+                            <td>Row:3 Cell:2</td>
+                        </tr>
+                        <tr>
+                            <td>Row:4 Cell:1</td>
+                            <td>Row:4 Cell:2</td>
+                        </tr>
+                        <tr>
+                            <td>Row:5 Cell:1</td>
+                            <td>Row:5 Cell:2</td>
+                        </tr>
+                        <tr>
+                            <td>Row:6 Cell:1</td>
+                            <td>Row:6 Cell:2</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var tfrow = document.getElementById('tfModalTableHover').rows.length;
+            var tbRow = [];
+            for (var i = 1; i < tfrow; i++) {
+                tbRow[i] = document.getElementById('tfModalTableHover').rows[i];
+                tbRow[i].onmouseover = function () {
+                    this.style.backgroundColor = '#f3f8aa';
+                };
+                tbRow[i].onmouseout = function () {
+                    this.style.backgroundColor = '#ffffff';
+                };
+            }
+        };
+    </script>
+    <script>
+        //定义一些数据
+        var data = ["a", "b", "c", "d", "e", "f", "asd", "zxc", "dfg", "efa", "f", "accc", "acfun", "facas"];
+        var ele_key = document.getElementById("key");
+        ele_key.onkeyup = function (e) {
+
+            var val = this.value;
+
+            //获取输入框里匹配的数据
+            var srdata = [];
+            for (var i = 0; i < data.length; i++) {
+                console.log(data[i].indexOf(val))
+                if (val.trim().length > 0 && data[i].indexOf(val) > -1) {
+                    srdata.push(data[i]);
+                }
+            }
+
+            //获取到的数据准备追加显示, 前期要做的事情: 清空数据,然后显示数据列表,如果获取到的数据为空,则不显示
+            var ele_datalist = document.getElementById("datalist");
+            ele_datalist.style.visibility = "visible";
+            ele_datalist.innerHTML = "";
+
+            if (srdata.length == 0) {
+                ele_datalist.style.visibility = "hidden";
+            }
+
+            //将搜索到的数据追加到显示数据列表, 然后每一行加入点击事件, 点击后将数据放入搜索框内, 数据列表隐藏
+            var self = this;
+            for (var i = 0; i < srdata.length; i++) {
+                var ele_li = document.createElement("li");
+                var ele_a = document.createElement("a");
+                ele_a.textContent = srdata[i];
+
+                ele_li.onclick = function () {
+                    self.value = this.textContent;
+                    ele_datalist.style.visibility = "hidden";
+                }
+                ele_li.appendChild(ele_a);
+                ele_datalist.appendChild(ele_li);
+            }
+
+        }
+    </script>
+</body>
+
+<style type="text/css">
+    table.tfModalTable {
+        font-size: 12px;
+        color: #333333;
+        width: 100%;
+        border-width: 1px;
+        border-color: #729ea5;
+        border-collapse: collapse;
+    }
+
+    table.tfModalTable th {
+        font-size: 12px;
+        background-color: #acc8cc;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #729ea5;
+        text-align: left;
+    }
+
+    table.tfModalTable tr {
+        background-color: #ffffff;
+    }
+
+    table.tfModalTable td {
+        font-size: 12px;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #729ea5;
+    }
+</style>
+<style>
+    .cloud {
+        position: relative;
+    }
+
+    .search {
+        position: absolute;
+        top: 0;
+        z-index: 99;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* input::-webkit-input-placeholder {
+    } */
+    .search .input_search {
+        font-size: 16px;
+        position: relative;
+        text-align: left;
+        text-indent: 5px;
+        width: 200px;
+        height: 25px;
+        border: 1px solid rgb(126, 126, 126);
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        /* background: rgba(0, 209, 112, 0.527); */
+    }
+
+    .search .input_search:focus {
+        outline: none;
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border: 1px solid rgb(24, 24, 24);
+
+
+    }
+
+    .search ul {
+        position: absolute;
+        display: block;
+        text-align: left;
+        width: 204px;
+        margin-top: 0px;
+        padding: 0;
+        list-style-type: none;
+        border: 1px solid rgb(24, 24, 24);
+        border-top: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+    }
+
+    .search li {
+        padding-top: 5px;
+        padding-bottom: 2px;
+        margin: 0;
+        text-align: left;
+        text-indent: 5px;
+    }
+
+    .search li:hover {
+        background: rgb(241, 241, 241);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+</style>
+
+
+</html>
