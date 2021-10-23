@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <!--  -->
     <div class="container">
         <!-- 标题开始 -->
@@ -23,7 +24,7 @@
         </div>
         <!-- 标题结束 -->
         <!-- 内容块 -->
-        <div class="row clearfix">
+        <div class="row clearfix" id="mainBody">
             <div class="col-md-12 column">
                 <div class="row clearfix">
                     <!-- 左侧块开始 -->
@@ -36,7 +37,7 @@
                             </div>
                         </div>
                         <div class="row clearfix">
-                            <!-- 左中 -->
+                            <!-- 左中 饼状图 -->
                             <div>
                                 <span>
                                     <p style="font-size: 16px;text-align:left;text-indent: 15px;">企业资产分布图</p>
@@ -45,7 +46,7 @@
                             <div class="col-md-10 column" id="pieChart" style="width: 100%;height: 230px;width: 360px;">
                             </div>
                         </div>
-                        <div class="row clearfix">
+                        <div class="row clearfix" style="padding-top: 50px;">
                             <!-- 左下 -->
                             <div class="col-md-12 column">
                                 <span>
@@ -60,23 +61,27 @@
                     <div class="col-md-6 column">
                         <div class="row clearfix">
                             <!-- 总关系图-->
-                            <div class="col-md-12 column" id="graphChart" style="width: 100%;height: 650px;"></div>
+                            <div class="col-md-12 column" id="graphChart" style="width: 100%;"></div>
 
                             <!-- 公司具体关系图 -->
                             <div class="col-md-12 column" id="graphCompany"
-                                style="width: 100%;height: 650px; display: none;"></div>
-                                <div style="float: right;">
+                                style="width: 100%;height: 680px; display: none;"></div>
+                                <div style="float: right;padding-right: 50px;">
                                     <button id="btn1" onclick="changGraph1()">信用预警</button>
-                                    <button id="btn2" onclick="changGraph2()">企业类型</button>
+                                    <button id="btn2" onclick="changGraph2()">信用等级</button>
                                 </div>
                         </div>
-                        <div class="row clearfix">
+     
+
+                        <div class="row clearfix" style="padding-left: 0px;">
                             <!-- 营业额折线图 -->
-                            <div class="col-md-12 column" id="lineStack" style="width: 900px;height: 230px;"></div>
+                            <!-- <div class="col-md-12 column" id="lineStack" style="width: 100%;height: 250px;"></div> -->
+                            <div class="col-md-12 column" id="lineStack" style="height: 250px;"></div>
                             <!-- 堆叠柱状图 + 折线图 -->
                             <div class="col-md-12 column" id="lineWithBar"
-                                style="width: 900px;height: 230px;display: none"></div>
+                                style="width: 1050px;height: 260px;display: none"></div>
                         </div>
+                        
                     </div>
                     <!-- 中间块结束 -->
                     <!-- 右侧块开始 -->
@@ -363,7 +368,7 @@
                         </div>
                         <!-- 右中结束 -->
                         <!-- 右下开始 -->
-                        <div class="row clearfix">
+                        <div class="row clearfix" style="padding-top: 50px;">
                             <div class="col-md-12 column">
                                 <div class="text-center">
                                     <h4>企业新闻舆情</h4>
@@ -410,7 +415,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
-
 
     <!-- 引入 d3 -->
     <script src="js/d3.v3.min.js"></script>

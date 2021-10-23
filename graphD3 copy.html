@@ -52,7 +52,7 @@
 <script>
 	// let col8_width = document.getElementById("col8").offsetWidth;
 	// console.log(col8_width);
-	let width = 1700;
+	let width = 1600;
 	// let width = col8_width * 0.95;
 	// let width = 800;
 	let height = 850;
@@ -103,7 +103,7 @@
 				return "#A9A9A9";
 			})
 			.attr("marker-end", "url(#resolved)");//根据箭头标记的id号标记箭头
-		// 圆圈 结点 
+		// 圆圈 结点
 		var node = svg.selectAll("circle")
 			.data(graph.nodes)
 			.enter().append("circle")

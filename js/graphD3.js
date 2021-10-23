@@ -1,7 +1,18 @@
 
+
+// var offsetWidth = document.getElementById('mainBody').offsetWidth;
+// var clientWidth = document.getElementById('mainBody').clientWidth;
+// var offsetHeight = document.getElementById('mainBody').offsetHeight;
+// console.log(offsetHeight);
+// console.log(offsetWidth);
+// console.log(clientWidth);
+
 // 知识图谱的长和宽
 var width = 940
-var height = 650
+var height = 660
+// graphChart
+document.getElementById('graphChart').style.height = height
+
 var radius = 6
 // 搜索框获取所有公司名称
 var searchCompanyName = []
@@ -21,9 +32,6 @@ var categories = [
 // 颜色比例尺
 var colorline = d3.scale.category10()
 var cloudFill = d3.scale.category20()
-
-
-
 
 
 // ------------------------------------------------------
@@ -384,7 +392,9 @@ lineStackOption = {
     toolbox: {
         show: true,
         orient: 'vertical',
-        left: 'right',
+        // left: 'right',
+        right:"30px",                               //组件离容器右侧的距离,'20%'
+
         top: 'top',
         feature: {
             myTool3: {
