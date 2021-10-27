@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://blog-static.cnblogs.com/files/believepd/bootstrap.min.css">
+    <style>
+        .test{
+            width: 300px;
+            height: 800px;
+        }
+        .check_text{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="test">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                       aria-expanded="true" aria-controls="collapseOne">
+                        过滤1
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <form action="">
+                        <input class="styled" type="checkbox"><span class="check_text">one</span> 
+                        <input class="styled" type="checkbox"><span class="check_text">two</span> <br>
+                        <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                        <input class="styled" type="checkbox"><span class="check_text">tree</span><br>
+                        <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                        <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                   </form>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                       aria-expanded="false" aria-controls="collapseTwo">
+                       过滤2
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    <form action="">
+                        <input class="styled" type="checkbox"><span class="check_text">one</span>
+                        <input class="styled" type="checkbox"><span class="check_text">two</span> <br>
+                        <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                        <input class="styled" type="checkbox"><span class="check_text">tree</span><br>
+                        <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                        <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                   </form>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+                       aria-expanded="false" aria-controls="collapseThree">
+                       过滤3
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    <form action="">
+                        <input class="styled" type="checkbox"><span class="check_text">one</span> 
+                        <input class="styled" type="checkbox"><span class="check_text">two</span> <br>
+                        <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                        <input class="styled" type="checkbox"><span class="check_text">tree</span><br>
+                        <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                        <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                   </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- 引入 Jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+</body>
+</html>

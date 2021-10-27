@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>江西赛</title>
+</head>
+
+<body>
+    <!-- 标题开始 -->
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column" id="title">
+                <h3 class="text-center" style="color: white;">
+                    企业信用预警系统
+                </h3>
+            </div>
+        </div>
+    </div>
+    <!-- 标题结束 -->
+    <div id="force">
+        <div class="test">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                过滤1
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                        aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <form action="">
+                                <input class="styled" type="checkbox"><span class="check_text">one</span>
+                                <input class="styled" type="checkbox"><span class="check_text">two</span> <br>
+                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                                <input class="styled" type="checkbox"><span class="check_text">tree</span><br>
+                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                过滤2
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <form action="">
+                                <input class="styled" type="checkbox"><span class="check_text">one</span>
+                                <input class="styled" type="checkbox"><span class="check_text">two</span> <br>
+                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                                <input class="styled" type="checkbox"><span class="check_text">tree</span><br>
+                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                过滤3
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <form action="">
+                                <input class="styled" type="checkbox"><span class="check_text">one</span>
+                                <input class="styled" type="checkbox"><span class="check_text">two</span> <br>
+                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                                <input class="styled" type="checkbox"><span class="check_text">tree</span><br>
+                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="CardBox">
+            <div id="head">企业画像</div>
+            <div class="company" id="company1">
+                <div class="companyHeader">
+                    <div class="companyName">
+                        <span>
+                            企业名片——XXX
+                        </span>
+                    </div>
+                    <div class="companyCanncel">
+                        <button onclick="canncel()" id="companyBut1">删除</button>
+                    </div>
+                </div>
+                <div class="companyBody">
+                    <div class="quarter pic"></div>
+                    <div class="quarter grades"></div>
+                    <div class="quarter icons"></div>
+                    <div class="quarter lables"></div>
+                </div>
+            </div>
+            <div class="company" id="company2">
+                <div class="companyHeader">
+                    <div class="companyName">
+                        <span>
+                            企业名片——XXX
+                        </span>
+                    </div>
+                    <div class="companyCanncel">
+                        <button onclick="canncel()" id="companyBut2">删除</button>
+                    </div>
+                </div>
+                <div class="companyBody">
+                    <div class="quarter pic"></div>
+                    <div class="quarter grades"></div>
+                    <div class="quarter icons"></div>
+                    <div class="quarter lables"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 d3 -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- 引入 Jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <script>
+        var width = document.getElementById("force").offsetWidth - 30
+        var height = window.innerHeight - document.getElementById("title").clientHeight - 70
+        var svg = d3.select("#force").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("style", "Border: 1px solid #000;");
+
+        var g = svg.append("g")
+        var colors = d3.scaleOrdinal(d3.schemeCategory10);
+
+
+        d3.json("json/miserables.json", function (error, data) {
+            simulation = d3.forceSimulation(data)
+                .nodes(data.nodes)
+                .force("link", d3.forceLink(data.links).id(d => d.id))
+                .force("manyBody", d3.forceManyBody().strength(-100).distanceMax(550).distanceMin(25))
+                .force("center", d3.forceCenter(width / 2, height / 2))
+                .force("collide", d3.forceCollide().radius(15).iterations(2).strength(0.5))
+                .on('tick', ticked)
+
+            var links = g.append("g")
+                .selectAll("line")
+                .data(data.links)
+                .enter()
+                .append("line")
+                .style("stroke-width", 1)//线条粗细
+                .attr("stroke", "rgb(165, 165, 165")
+
+            var nodes = g.append("g")
+                .selectAll("circle")
+                .data(data.nodes)
+                .enter()
+                .append("circle")
+                .attr("r", 6)
+                .attr('fill', d => colors(d.group))
+                .on("click", function (d) {
+                    console.log(d.id);
+                })
+                .call(d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended)
+                )
+
+            function ticked() {
+                links.attr('x1', d => d.source.x)
+                    .attr('y1', d => d.source.y)
+                    .attr('x2', d => d.target.x)
+                    .attr('y2', d => d.target.y)
+
+                nodes.attr('cx', d => d.x)
+                    .attr('cy', d => d.y)
+            }
+
+            function dragstarted(event) {
+                console.log(event);
+                if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+                event.fx = d3.event.x;
+                event.fy = d3.event.y;
+            }
+
+            function dragged(event) {
+                event.fx = d3.event.x;
+                event.fy = d3.event.y;
+            }
+
+            function dragended(event) {
+                if (!d3.event.active) simulation.alphaTarget(0);
+                event.fx = null;
+                event.fy = null;
+            }
+
+
+        })
+
+
+    </script>
+
+</body>
+<style>
+    body {
+        background-color: #232322;
+    }
+
+    #force {
+        margin: 0 auto;
+        position: relative;
+    }
+</style>
+<style>
+    .test {
+        width: 300px;
+        height: 800px;
+        position: absolute;
+        left: 2%;
+        top: 2%;
+        z-index: 100;
+    }
+
+    .check_text {
+        font-size: 30px;
+    }
+</style>
+<style>
+    #CardBox {
+        position: absolute;
+        z-index: 100;
+        bottom: 1%;
+        right: 2%;
+        width: 500px;
+        height: 600px;
+        background-color: rgba(100, 100, 100, 0.966);
+        overflow-y: scroll;
+        opacity: 0.8;
+
+    }
+
+    #head {
+        padding-bottom: 10px;
+        border-bottom: black solid 4px;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+    }
+
+    .company {
+        margin: 10px 10px;
+        height: 400px;
+        background-color: black;
+        opacity: 0.5;
+    }
+
+    .companyHeader {
+        display: flex;
+        border-bottom: rgb(255, 255, 255) solid 4px;
+        /* line-height 和 height 保持一致即可实现文字垂直居中 */
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .companyName {
+        display: inline;
+        color: white;
+        background-color: rgb(53, 53, 53);
+        flex: 1;
+
+    }
+
+    .companyCanncel {
+        display: inline;
+    }
+
+    .companyBody {
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+
+    }
+
+    .quarter {
+        float: left;
+    }
+
+    .pic {
+        width: 40%;
+        height: 54%;
+        background-color: #5BC0DE;
+
+    }
+
+    .grades {
+        width: 60%;
+        height: 54%;
+        background-color: #5CB85C;
+
+    }
+
+    .icons {
+        width: 40%;
+        height: 34%;
+        background-color: #F0AD4E;
+        clear: left;
+    }
+
+    .lables {
+        width: 60%;
+        height: 34%;
+        background-color: #FFC706;
+    }
+</style>
+
+</html>
