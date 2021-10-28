@@ -1,0 +1,28 @@
+{
+    "name": "flare",
+    "children": [
+     {
+      "name": "",
+      "children": [
+       {
+        "name": "converters",
+        "children": [
+         {"name": "1110", "size": 2},
+         {"name": "1130", "size": 18},
+         {"name": "1123", "size": 4}
+        ]
+       },
+       {"name": "9100", "size": 6},
+       {"name": "9500", "size": 2}
+      ]
+     },
+     {
+      "name": "display",
+      "children": [
+       {"name": "2123", "size": 2},
+       {"name": "2151", "size": 3},
+       {"name": "2130", "size": 8}
+      ]
+     }
+    ]
+   }

@@ -14,21 +14,21 @@
         <div class="row clearfix">
             <div class="col-md-12 column" id="title">
                 <h3 class="text-center" style="color: white;">
-                    企业信用预警系统
+                    企业画像
                 </h3>
             </div>
         </div>
     </div>
     <!-- 标题结束 -->
     <div id="force">
-        <div class="test">
+        <div class="filterBox">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">
                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
                                 aria-expanded="true" aria-controls="collapseOne">
-                                过滤1
+                                企业类型
                             </a>
                         </h4>
                     </div>
@@ -36,12 +36,18 @@
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             <form action="">
-                                <input class="styled" type="checkbox"><span class="check_text">one</span>
-                                <input class="styled" type="checkbox"><span class="check_text">two</span> <br>
-                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
-                                <input class="styled" type="checkbox"><span class="check_text">tree</span><br>
-                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
-                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                                <input class="styled checkbox_one" name="one" value="one" type="checkbox"><span
+                                    class="check_text">内资公司法人</span>
+                                <input class="styled checkbox_one" name="one" value="two" type="checkbox"><span
+                                    class="check_text">内资分公司</span> <br>
+                                <input class="styled checkbox_one" name="one" value="three" type="checkbox"><span
+                                    class="check_text">集团</span>
+                                <input class="styled checkbox_one" name="one" value="four" type="checkbox"><span
+                                    class="check_text">外商投资合伙企业分支机构</span><br>
+                                <input class="styled checkbox_one" name="one" value="five" type="checkbox"><span
+                                    class="check_text">内资合伙企业</span>
+                                <input class="styled checkbox_one" name="one" value="six" type="checkbox"><span
+                                    class="check_text">外资公司法人</span><br>
                             </form>
                         </div>
                     </div>
@@ -58,12 +64,18 @@
                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                         <div class="panel-body">
                             <form action="">
-                                <input class="styled" type="checkbox"><span class="check_text">one</span>
-                                <input class="styled" type="checkbox"><span class="check_text">two</span> <br>
-                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
-                                <input class="styled" type="checkbox"><span class="check_text">tree</span><br>
-                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
-                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                                <input class="styled checkbox_two" name="two" value="one" type="checkbox"><span
+                                    class="check_text">one</span>
+                                <input class="styled checkbox_two" name="two" value="two" type="checkbox"><span
+                                    class="check_text">two</span> <br>
+                                <input class="styled checkbox_two" name="two" value="three" type="checkbox"><span
+                                    class="check_text">three</span>
+                                <input class="styled checkbox_two" name="two" value="four" type="checkbox"><span
+                                    class="check_text">four</span><br>
+                                <input class="styled checkbox_two" name="two" value="five" type="checkbox"><span
+                                    class="check_text">five</span>
+                                <input class="styled checkbox_two" name="two" value="six" type="checkbox"><span
+                                    class="check_text">six</span><br>
                             </form>
                         </div>
                     </div>
@@ -81,12 +93,18 @@
                         aria-labelledby="headingThree">
                         <div class="panel-body">
                             <form action="">
-                                <input class="styled" type="checkbox"><span class="check_text">one</span>
-                                <input class="styled" type="checkbox"><span class="check_text">two</span> <br>
-                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
-                                <input class="styled" type="checkbox"><span class="check_text">tree</span><br>
-                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
-                                <input class="styled" type="checkbox"><span class="check_text">tree</span>
+                                <input class="styled checkbox_three" name="three" value="one" type="checkbox"><span
+                                    class="check_text">one</span>
+                                <input class="styled checkbox_three" name="three" value="two" type="checkbox"><span
+                                    class="check_text">two</span> <br>
+                                <input class="styled checkbox_three" name="three" value="three" type="checkbox"><span
+                                    class="check_text">three</span>
+                                <input class="styled checkbox_three" name="three" value="four" type="checkbox"><span
+                                    class="check_text">four</span><br>
+                                <input class="styled checkbox_three" name="three" value="five" type="checkbox"><span
+                                    class="check_text">five</span>
+                                <input class="styled checkbox_three" name="three" value="six" type="checkbox"><span
+                                    class="check_text">six</span><br>
                             </form>
                         </div>
                     </div>
@@ -132,6 +150,11 @@
                 </div>
             </div>
         </div>
+        <div id="thumbnailBox">
+            <svg width="300" height="300" id="thumbnailGraph"></svg>
+
+            <!-- <div id="thumbnailGraph" style="height: 300px;width: 300px;"></div> -->
+        </div>
     </div>
 
     <!-- 引入 d3 -->
@@ -147,16 +170,62 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
+    <!-- 引入 echarts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
     <script>
-        var width = document.getElementById("force").offsetWidth - 30
-        var height = window.innerHeight - document.getElementById("title").clientHeight - 70
+        let val_1 = [];
+        let val_2 = [];
+        let val_3 = [];
+        for (let i = 0, j = document.getElementsByClassName("checkbox_one").length; i < j; i++)
+            document.getElementsByClassName("checkbox_one")[i].addEventListener("click", function () { GetValue("one"); });
+        for (let i = 0, j = document.getElementsByClassName("checkbox_two").length; i < j; i++)
+            document.getElementsByClassName("checkbox_two")[i].addEventListener("click", function () { GetValue("two"); });
+        for (let i = 0, j = document.getElementsByClassName("checkbox_three").length; i < j; i++)
+            document.getElementsByClassName("checkbox_three")[i].addEventListener("click", function () { GetValue("three"); });
+
+        function GetValue(which) {
+            $("input[name=" + which + "]").each(function () {
+                if ($(this).prop("checked") == true) {
+                    if (which == "one") {
+                        if (!val_1.includes($(this).val())) val_1.push($(this).val());
+                    }
+                    if (which == "two") {
+                        if (!val_2.includes($(this).val())) val_2.push($(this).val());
+                    }
+                    if (which == "three") {
+                        if (!val_3.includes($(this).val())) val_3.push($(this).val());
+                    }
+                } else {
+                    if (which == "one") {
+                        if (val_1.includes($(this).val())) val_1.splice(val_1.indexOf($(this).val()), 1);
+                    }
+                    if (which == "two") {
+                        if (val_2.includes($(this).val())) val_2.splice(val_2.indexOf($(this).val()), 1);
+                    }
+                    if (which == "three") {
+                        if (val_3.includes($(this).val())) val_3.splice(val_3.indexOf($(this).val()), 1);
+                    }
+                }
+            });
+            if (which == "one") console.log("val_1:", val_1);
+            if (which == "two") console.log("val_2:", val_2);
+            if (which == "three") console.log("val_3:", val_3);
+        }
+    </script>
+    <script>
+        var offsetWidth = 30
+        var width = document.getElementById("force").offsetWidth - offsetWidth
+        var height = window.innerHeight - document.getElementById("title").clientHeight - 10
         var svg = d3.select("#force").append("svg")
             .attr("width", width)
             .attr("height", height)
+            .attr("transform", "translate(" + offsetWidth / 2 + "," + 0 + ")")
             .attr("style", "Border: 1px solid #000;");
 
         var g = svg.append("g")
-        var colors = d3.scaleOrdinal(d3.schemeCategory10);
+        var fader = function (color) { return d3.interpolateRgb(color, "#fff")(0.2); };
+        var colors = d3.scaleOrdinal(d3.schemeCategory20.map(fader));
+        // var colors = d3.scaleOrdinal(d3.schemeCategory10);
 
 
         d3.json("json/miserables.json", function (error, data) {
@@ -223,6 +292,160 @@
 
         })
 
+        let companyType = [
+            {
+                name: '11',
+                value: 24,
+                children: [
+                    {
+                        name: '1110',
+                        value: 2
+                    },
+                    {
+                        name: '1130',
+                        value: 18
+                    },
+                    {
+                        name: '1123',
+                        value: 4
+                    }
+                ]
+            },
+            {
+                name: '9',
+                value: 8,
+                children: [
+                    {
+                        name: '9100',
+                        value: 6,
+                    },
+                    {
+                        name: '9500',
+                        value: 2,
+                    },
+                ]
+            },
+            {
+                name: '9',
+                value: 14,
+                children: [
+                    {
+                        name: '2123',
+                        value: 2,
+                    },
+                    {
+                        name: '2130',
+                        value: 3,
+                    },
+                    {
+                        name: '2151',
+                        value: 9,
+                    },
+                ]
+            }
+        ]
+        var dom = document.getElementById("thumbnailGraph");
+        var myChart = echarts.init(dom);
+        var app = {};
+
+        var option;
+        option = {
+            series: [
+                {
+                    type: 'treemap',
+                    data: companyType
+                }
+            ]
+        };
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+        }
+
+    </script>
+    <script>
+        var treeMap = d3.select("#thumbnailGraph"),
+            treeMapwidth = +treeMap.attr("width"),
+            treeMapheight = +treeMap.attr("height");
+
+        var fader = function (color) { return d3.interpolateRgb(color, "#fff")(0.2); },
+            color = d3.scaleOrdinal(d3.schemeCategory20.map(fader)),
+            format = d3.format(",d");
+
+        var treemap = d3.treemap()
+            .tile(d3.treemapResquarify)
+            .size([treeMapwidth, treeMapheight])
+            .round(true)
+            .paddingInner(1);
+
+        d3.json("json/treeMap.json", function (error, data) {
+            if (error) throw error;
+
+            var root = d3.hierarchy(data)
+                .eachBefore(function (d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
+                .sum(sumBySize)
+                .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
+
+            treemap(root);
+
+            var cell = treeMap.selectAll("g")
+                .data(root.leaves())
+                .enter().append("g")
+                .attr("transform", function (d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
+
+            cell.append("rect")
+                .attr("id", function (d) { return d.data.id; })
+                .attr("width", function (d) { return d.x1 - d.x0; })
+                .attr("height", function (d) { return d.y1 - d.y0; })
+                .attr("fill", function (d) { return color(d.parent.data.id); });
+
+            cell.append("clipPath")
+                .attr("id", function (d) { return "clip-" + d.data.id; })
+                .append("use")
+                .attr("xlink:href", function (d) { return "#" + d.data.id; });
+
+            cell.append("text")
+                .attr("clip-path", function (d) { return "url(#clip-" + d.data.id + ")"; })
+                .selectAll("tspan")
+                .data(function (d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g); })
+                .enter().append("tspan")
+                .attr("x", 5)
+                .attr("y", function (d, i) { return 20 + i * 15; })
+                .text(function (d) { return d; })
+                .style("fill","white");
+
+           /*  d3.selectAll("input")
+                .data(sumBySize, function (d) { return d ? d.name : this.value; })
+                .data([sumBySize, sumByCount], function (d) { return d ? d.name : this.value; })
+                .on("change", changed);
+
+            var timeout = d3.timeout(function () {
+                d3.select("input[value=\"sumBySize\"]")
+                    .property("checked", true)
+                    .dispatch("change");
+            }, 2000);
+
+            function changed(sum) {
+                timeout.stop();
+
+                treemap(root.sum(sum));
+
+                cell.transition()
+                    .duration(750)
+                    .attr("transform", function (d) { return "translate(" + d.x0 + "," + d.y0 + ")"; })
+                    .select("rect")
+                    .attr("width", function (d) { return d.x1 - d.x0; })
+                    .attr("height", function (d) { return d.y1 - d.y0; });
+            } */
+        });
+
+        function sumByCount(d) {
+            return d.children ? 0 : 1;
+        }
+
+        function sumBySize(d) {
+            return d.size;
+        }
 
     </script>
 
@@ -238,17 +461,17 @@
     }
 </style>
 <style>
-    .test {
+    .filterBox {
         width: 300px;
-        height: 800px;
+        height: 300px;
         position: absolute;
         left: 2%;
-        top: 2%;
+        bottom: 10%;
         z-index: 100;
     }
 
     .check_text {
-        font-size: 30px;
+        font-size: 20px;
     }
 </style>
 <style>
@@ -336,6 +559,19 @@
         width: 60%;
         height: 34%;
         background-color: #FFC706;
+    }
+</style>
+<style>
+    #thumbnailBox {
+        /* background-color: rgba(100, 100, 100, 0.966); */
+        position: absolute;
+        z-index: 100;
+        top: 0.5%;
+        left: 1.5%;
+        width: 300px;
+        height: 300px;
+        opacity: 0.8;
+
     }
 </style>
 
