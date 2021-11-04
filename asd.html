@@ -1,0 +1,91 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title></title>
+    <style type="text/css">
+        .graph {
+            position: relative;
+            /* IE is dumb */
+            width: 200px;
+            padding: 2px;
+        }
+
+        .graph .bar {
+            display: block;
+            position: relative;
+            background: #B1D632;
+            text-align: center;
+            color: #333;
+            height: 2em;
+            line-height: 2em;
+        }
+
+        .graph .bar span {
+            position: absolute;
+            left: 1em;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        .barContainer {
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .skills {
+            text-align: right;
+            padding-right: 10px;
+            line-height: 20px;
+            color: white;
+        }
+
+        .html {
+            width: 90%;
+            background-color: #4CAF50;
+        }
+
+        .css {
+            width: 80%;
+            background-color: #2196F3;
+        }
+
+        .js {
+            width: 65%;
+            background-color: #f44336;
+        }
+
+        .php {
+            width: 60%;
+            background-color: #808080;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="graph"> <strong class="bar" style="width: 98%; float: left;"></strong> <span style="float: right;">25</span></div>
+    <!-- <div class="graph"> <strong class="bar" style="width: 60%;">60%</strong> </div> -->
+    <h1>进度条</h1>
+
+
+    <p>CSS</p>
+    <div class="barContainer">
+        <div class="skills css">80%</div>
+    </div>
+
+    <p>JavaScript</p>
+    <div class="barContainer">
+        <div class="skills js">65%</div>
+    </div>
+
+    <p>PHP</p>
+    <div class="barContainer">
+        <div class="skills php">60%</div>
+    </div>
+</body>
+
+</html>

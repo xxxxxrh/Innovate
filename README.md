@@ -9,4 +9,4 @@ python -m http.server 8010
 
 浏览器里输入：
 
-http://localhost:8010/JiangXi.html
+http://localhost:8010/zoomableTreemap1.html

@@ -10,26 +10,148 @@
 
 <body>
     <div id="force"></div>
+    <button type="button">导出文件</button>
+    <a href="#"></a>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
-        var width = 975
-        var height = 755
+        var offset = 30
+        var width = document.getElementById("force").offsetWidth - offset
+        var height = window.innerHeight - offset
         var svg = d3.select("#force").append("svg")
             .attr("width", width)
             .attr("height", height)
             .attr("style", "Border: 1px solid #000;");
 
-        var g = svg.append("g") 
-        var colors = d3.scaleOrdinal(d3.schemeCategory10);
+        var g = svg.append("g")
+        var colors = d3.scaleOrdinal(d3.schemeCategory20);
 
 
-        d3.json("json/fig7ab.json", function (error, data) {
+        // d3.json("json/fig7ab.json", function (error, data) {
+        d3.json("json/JiangXiForceDataForPH2800.json", function (error, data) {
+            console.time("str")  //开始
+            let data1 = {
+                "nodes": [],
+                "links": [],
+            }
+
+            // let qydjxx = datas.data
+            // qydjxx.forEach((e, i) => {
+            //     // 添加大类
+            //     data.nodes.push({
+            //         "id": e.EnterpriseBigClassChineseName,
+            //         "group": i
+            //     })
+            //     // 添加小类
+            //     e.SmallClass.forEach((se, si) => {
+            //         data.nodes.push({
+            //             "id": se.EnterpriseSmallClassChineseName,
+            //             "group": i
+            //         })
+            //         // 大类与小类的关系
+            //         data.links.push({
+            //             "source": e.EnterpriseBigClassChineseName,
+            //             "value":1,
+            //             "target": se.EnterpriseSmallClassChineseName
+            //         })
+
+            //         se.Enterprise.forEach((conpamy, conpamyIndex) => {
+            //             if (conpamyIndex < 333) {
+                            
+            //                 data.nodes.push({
+            //                     "id": conpamy.QYMC,
+            //                     "group": i
+            //                 })
+            //                 data.links.push({
+            //                     "source": se.EnterpriseSmallClassChineseName,
+            //                     value:1,
+            //                     "target": conpamy.QYMC
+            //                 })
+            //             }
+            //         })
+            //     })
+            // });
+            // ----------------------------------- //
+            // qydjxx.forEach((e, i) => {
+            //     // 添加大类
+            //     data.nodes.push({
+            //         "name": e.EnterpriseBigClassChineseName,
+            //         "code": e.EnterpriseClassCode,
+            //         "group": i
+            //     })
+            //     // 添加小类
+            //     e.SmallClass.forEach((se, si) => {
+            //         data.nodes.push({
+            //             "name": se.EnterpriseSmallClassChineseName,
+            //             "code": se.EnterpriseClassCoding,
+            //             "group": i
+            //         })
+            //         // 大类与小类的关系
+            //         data.links.push({
+            //             "source": e.EnterpriseBigClassChineseName,
+            //             "target": se.EnterpriseSmallClassChineseName
+            //         })
+
+            //         se.Enterprise.forEach((conpamy, conpamyIndex) => {
+            //             data.nodes.push({
+            //                 "name": conpamy.QYMC,
+            //                 "code": conpamy.ID,
+            //                 "group": i
+            //             })
+            //             data.links.push({
+            //                 "source": se.EnterpriseSmallClassChineseName,
+            //                 "target": conpamy.QYMC
+            //             })
+            //         })
+            //     })
+            // });
+
+            console.timeEnd("str") //结束
+
+
+
+            /* 
+                        datas.nodes.forEach((e, i) => {
+                data.nodes.push({
+                    "id": e.name,
+                    "group": e.group
+                })
+            })
+
+            dataNodes = datas.nodes
+            dataNodes.forEach(function (d, i) {
+                d.touzi.forEach(function (company) {
+
+                    data.links.push({
+                        "source": d.name,
+                        "value": 1,
+                        "target": company
+                    })
+
+                })
+            })
+            */
+           console.log(data);
+            let jsonStr = data;
+            var btn = document.querySelector("button"); //  选择按钮
+            var link = document.querySelector("a"); //  选择链接
+            //  导出文件按钮点击
+            btn.onclick = function () {
+                jsonStr = JSON.stringify(jsonStr); //  把 JSON 对象转换为字符串
+                var blob = new Blob([jsonStr]); //  创建 blob 对象
+                link.href = URL.createObjectURL(blob); //  创建一个 URL 对象并传给 a 的 href
+                link.download = "config.json"; //  设置下载的默认文件名
+                link.click(); //  点击下载链接
+            };
+
+
+
+
             simulation = d3.forceSimulation(data)
                 .nodes(data.nodes)
                 .force("link", d3.forceLink(data.links).id(d => d.id))
-                .force("manyBody", d3.forceManyBody().strength(-100).distanceMax(550).distanceMin(25))
+                .force("manyBody", d3.forceManyBody().strength(-155).distanceMax(5).distanceMin(.5))
                 .force("center", d3.forceCenter(width / 2, height / 2))
-                .force("collide", d3.forceCollide().radius(5).iterations(2).strength(0.5))
+                .force("collide", d3.forceCollide().radius(5).iterations(-2).strength(0.5))
                 .on('tick', ticked)
 
             var links = g.append("g")
@@ -37,18 +159,19 @@
                 .data(data.links)
                 .enter()
                 .append("line")
-                .style("stroke-width", 1)//线条粗细
-                .attr("stroke", "#CDCDCD")
+                .style("stroke-width", .5)//线条粗细
+                .style("stroke", "#DEE1E6")
 
             var nodes = g.append("g")
                 .selectAll("circle")
                 .data(data.nodes)
                 .enter()
                 .append("circle")
-                .attr("r", 6)
+                .attr("r", 3)
                 .attr('fill', d => colors(d.group))
                 .on("click", function (d) {
-                    console.log(d.id);
+                    // 代码写在这里
+                    console.log(d.name);
                 })
                 .call(d3.drag()
                     .on("start", dragstarted)
@@ -58,12 +181,12 @@
 
             function ticked() {
                 links.attr('x1', d => d.source.x)
-                     .attr('y1', d => d.source.y)
-                     .attr('x2', d => d.target.x)
-                     .attr('y2', d => d.target.y)
+                    .attr('y1', d => d.source.y)
+                    .attr('x2', d => d.target.x)
+                    .attr('y2', d => d.target.y)
 
                 nodes.attr('cx', d => d.x)
-                     .attr('cy', d => d.y)
+                    .attr('cy', d => d.y)
             }
 
             function dragstarted(event) {
@@ -83,6 +206,11 @@
                 event.fx = null;
                 event.fy = null;
             }
+            console.log(data);
+            // 10s后停止模拟
+            // setTimeout(function () {
+            //     simulation.stop();
+            // }, 10000);
 
 
         })

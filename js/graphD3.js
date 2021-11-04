@@ -664,9 +664,9 @@ d3.json("json/lyp_network.json", function (error, graph) {
         .style("stroke", (d) => {
             //根据关系的不同设置线条颜色
             if (d.rela == "投资") {
-                return "#CECECE";
+                return "rgb(87, 87, 87)";
             } else if (d.rela == "合伙") {
-                return "#B43232";
+                return "rgb(87, 87, 87)";
             }
         })
         .attr("marker-end", "url(#resolved)");//根据箭头标记的id号标记箭头
@@ -927,6 +927,8 @@ d3.json("json/lyp_network.json", function (error, graph) {
         .attr("dy", "0.50em")
         .style("font-size", "20px")
         .text(graphTitle)
+
+        console.log(graph);
     
  
 
