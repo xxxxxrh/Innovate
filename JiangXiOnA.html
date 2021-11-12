@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>江西赛</title>
+</head>
+
+<body>
+    <!-- 标题开始 -->
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column" id="title">
+                <h3 class="text-center" style="color: white;">
+                    企业画像
+                </h3>
+            </div>
+        </div>
+    </div>
+    <!-- 标题结束 -->
+    <div id="force">
+        <div id="leftQu"></div>
+        <div id="rightQu"></div>
+        <div class="filterBox">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                行业类型
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                        aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <form action="">
+                                <input class="styled checkbox_one" name="one" value="one" type="checkbox">
+                                <span class="check_text">内资公司法人</span>
+                                <input class="styled checkbox_one" name="one" value="two" type="checkbox"><span
+                                    class="check_text">内资分公司</span>
+                                <input class="styled checkbox_one" name="one" value="three" type="checkbox"><span
+                                    class="check_text">集团</span>
+                                <input class="styled checkbox_one" name="one" value="four" type="checkbox"><span
+                                    class="check_text">外商投资合伙企业分支机构</span>
+                                <input class="styled checkbox_one" name="one" value="five" type="checkbox"><span
+                                    class="check_text">内资合伙企业</span>
+                                <input class="styled checkbox_one" name="one" value="six" type="checkbox"><span
+                                    class="check_text">外资公司法人</span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                企业类型
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <form action="">
+                                <input class="styled checkbox_two" name="two" value="one" type="checkbox"><span
+                                    class="check_text">one</span>
+                                <input class="styled checkbox_two" name="two" value="two" type="checkbox"><span
+                                    class="check_text">two</span> <br>
+                                <input class="styled checkbox_two" name="two" value="three" type="checkbox"><span
+                                    class="check_text">three</span>
+                                <input class="styled checkbox_two" name="two" value="four" type="checkbox"><span
+                                    class="check_text">four</span><br>
+                                <input class="styled checkbox_two" name="two" value="five" type="checkbox"><span
+                                    class="check_text">five</span>
+                                <input class="styled checkbox_two" name="two" value="six" type="checkbox"><span
+                                    class="check_text">six</span><br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="search">
+            <input type="text" class="input_search" id="inputKey" placeholder="请输入公司名称" />
+            <ul id="datalist" class="input_suggest">
+            </ul>
+        </div>
+       
+
+        <div id="CardBox">
+            <div id="head">企业画像</div>
+            <div class="company" id="company1">
+                <div class="companyHeader">
+                    <div class="companyName">
+                        <span>
+                            企业名片——XXX
+                        </span>
+                    </div>
+                    <div class="companyCanncel">
+                        <img src="pic/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="companyBody">
+                    <div class="quarter pic">
+                        <div class="conpamyPic">
+                            <img src="pic/企业画像/redCloth.png" class="conpamyPicCloth">
+                            <img src="pic/企业画像/cryHead.png" class="conpamyPicHead">
+                            <img src="pic/企业画像/Glass.png" class="conpamyPicGlass">
+                            <img src="pic/企业画像/分类/SmallClass/Medical.png" class="conpamyPicIcon">
+                        </div>                    </div>
+                    <div class="quarter grades">
+                        <table style="color: white;">
+
+                            <tr>
+                                <td width="70">信贷评分</td>
+                                <td width="150">
+                                    <div class="barContainer">
+                                        <div class="skills XDPF"> &ensp;</div>
+                                    </div>
+                                </td>
+                                <td width="50">80</td>
+                            </tr>
+                            <tr>
+                                <td>信用评分</td>
+                                <td>
+                                    <div class="barContainer">
+                                        <div class="skills XYPF"> &ensp;</div>
+                                    </div>
+                                </td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td>综合评分</td>
+                                <td>
+                                    <div class="barContainer">
+                                        <div class="skills ZHPF"> &ensp;</div>
+                                    </div>
+                                </td>
+                                <td>66.66</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="quarter icons"></div>
+                    <div class="quarter lables">
+                        <p>
+                            <span class="conpamyLable">互联网</span>
+                            <span class="conpamyLable">食品</span>
+                            <span class="conpamyLable">广告设计</span>
+                            <span class="conpamyLable">广告</span>
+                            <span class="conpamyLable">艺术交流</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+        
+        <div id="thumbnailBox">
+            <svg width="300" height="300" id="thumbnailGraph"></svg>
+
+            <!-- <div id="thumbnailGraph" style="height: 300px;width: 300px;"></div> -->
+        </div>
+    </div>
+
+    <!-- 引入 d3 -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- 引入 Jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <!-- 引入 echarts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <script>
+        let val_1 = [];
+        let val_2 = [];
+        let val_3 = [];
+        for (let i = 0, j = document.getElementsByClassName("checkbox_one").length; i < j; i++)
+            document.getElementsByClassName("checkbox_one")[i].addEventListener("click", function () { GetValue("one"); });
+        for (let i = 0, j = document.getElementsByClassName("checkbox_two").length; i < j; i++)
+            document.getElementsByClassName("checkbox_two")[i].addEventListener("click", function () { GetValue("two"); });
+        for (let i = 0, j = document.getElementsByClassName("checkbox_three").length; i < j; i++)
+            document.getElementsByClassName("checkbox_three")[i].addEventListener("click", function () { GetValue("three"); });
+
+        function GetValue(which) {
+            $("input[name=" + which + "]").each(function () {
+                if ($(this).prop("checked") == true) {
+                    if (which == "one") {
+                        if (!val_1.includes($(this).val())) val_1.push($(this).val());
+                    }
+                    if (which == "two") {
+                        if (!val_2.includes($(this).val())) val_2.push($(this).val());
+                    }
+                    if (which == "three") {
+                        if (!val_3.includes($(this).val())) val_3.push($(this).val());
+                    }
+                } else {
+                    if (which == "one") {
+                        if (val_1.includes($(this).val())) val_1.splice(val_1.indexOf($(this).val()), 1);
+                    }
+                    if (which == "two") {
+                        if (val_2.includes($(this).val())) val_2.splice(val_2.indexOf($(this).val()), 1);
+                    }
+                    if (which == "three") {
+                        if (val_3.includes($(this).val())) val_3.splice(val_3.indexOf($(this).val()), 1);
+                    }
+                }
+            });
+            if (which == "one") console.log("val_1:", val_1);
+            if (which == "two") console.log("val_2:", val_2);
+            if (which == "three") console.log("val_3:", val_3);
+        }
+    </script>
+    <script>
+        var offsetWidth = 30
+        var width = document.getElementById("force").offsetWidth - offsetWidth
+        var height = window.innerHeight - document.getElementById("title").clientHeight - 10
+        var svg = d3.select("#force").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("transform", "translate(" + offsetWidth / 2 + "," + 0 + ")")
+            .attr("style", "Border: 1px solid #000;");
+
+        var g = svg.append("g")
+        var fader = function (color) { return d3.interpolateRgb(color, "#fff")(0.2); };
+        var colors = d3.scaleOrdinal(d3.schemeCategory20.map(fader));
+        // var colors = d3.scaleOrdinal(d3.schemeCategory10);
+
+
+        d3.json("json/miserables.json", function (error, data) {
+            simulation = d3.forceSimulation(data)
+                .nodes(data.nodes)
+                .force("link", d3.forceLink(data.links).id(d => d.id))
+                .force("manyBody", d3.forceManyBody().strength(-100).distanceMax(550).distanceMin(25))
+                .force("center", d3.forceCenter(width / 2, height / 2))
+                .force("collide", d3.forceCollide().radius(15).iterations(2).strength(0.5))
+                .on('tick', ticked)
+
+            var links = g.append("g")
+                .selectAll("line")
+                .data(data.links)
+                .enter()
+                .append("line")
+                .style("stroke-width", 1)//线条粗细
+                .attr("stroke", "rgb(165, 165, 165")
+
+            var nodes = g.append("g")
+                .selectAll("circle")
+                .data(data.nodes)
+                .enter()
+                .append("circle")
+                .attr("r", 6)
+                .attr('fill', d => colors(d.group))
+                .on("click", function (d) {
+                    console.log(d.id);
+                })
+                .call(d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended)
+                )
+
+            function ticked() {
+                links.attr('x1', d => d.source.x)
+                    .attr('y1', d => d.source.y)
+                    .attr('x2', d => d.target.x)
+                    .attr('y2', d => d.target.y)
+
+                nodes.attr('cx', d => d.x)
+                    .attr('cy', d => d.y)
+            }
+
+            function dragstarted(event) {
+                console.log(event);
+                if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+                event.fx = d3.event.x;
+                event.fy = d3.event.y;
+            }
+
+            function dragged(event) {
+                event.fx = d3.event.x;
+                event.fy = d3.event.y;
+            }
+
+            function dragended(event) {
+                if (!d3.event.active) simulation.alphaTarget(0);
+                event.fx = null;
+                event.fy = null;
+            }
+
+
+        })
+
+        // let companyType = [
+        //     {
+        //         name: '11',
+        //         value: 24,
+        //         children: [
+        //             {
+        //                 name: '1110',
+        //                 value: 2
+        //             },
+        //             {
+        //                 name: '1130',
+        //                 value: 18
+        //             },
+        //             {
+        //                 name: '1123',
+        //                 value: 4
+        //             }
+        //         ]
+        //     },
+        //     {
+        //         name: '9',
+        //         value: 8,
+        //         children: [
+        //             {
+        //                 name: '9100',
+        //                 value: 6,
+        //             },
+        //             {
+        //                 name: '9500',
+        //                 value: 2,
+        //             },
+        //         ]
+        //     },
+        //     {
+        //         name: '9',
+        //         value: 14,
+        //         children: [
+        //             {
+        //                 name: '2123',
+        //                 value: 2,
+        //             },
+        //             {
+        //                 name: '2130',
+        //                 value: 3,
+        //             },
+        //             {
+        //                 name: '2151',
+        //                 value: 9,
+        //             },
+        //         ]
+        //     }
+        // ]
+        // var dom = document.getElementById("thumbnailGraph");
+        // var myChart = echarts.init(dom);
+        // var app = {};
+
+        // var option;
+        // option = {
+        //     series: [
+        //         {
+        //             type: 'treemap',
+        //             data: companyType
+        //         }
+        //     ]
+        // };
+
+        // if (option && typeof option === 'object') {
+        //     myChart.setOption(option);
+        // }
+
+    </script>
+    <script>
+        var treeMap = d3.select("#thumbnailGraph"),
+            treeMapwidth = +treeMap.attr("width"),
+            treeMapheight = +treeMap.attr("height");
+
+        var fader = function (color) { return d3.interpolateRgb(color, "#fff")(0.2); },
+            color = d3.scaleOrdinal(d3.schemeCategory20.map(fader)),
+            format = d3.format(",d");
+
+        var treemap = d3.treemap()
+            .tile(d3.treemapResquarify)
+            .size([treeMapwidth, treeMapheight])
+            .round(true)
+            .paddingInner(1);
+
+        d3.json("json/TreeMapData.json", function (error, data) {
+            if (error) throw error;
+
+            var root = d3.hierarchy(data)
+                .eachBefore(function (d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
+                .sum(sumBySize)
+                .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
+
+            treemap(root);
+
+            var cell = treeMap.selectAll("g")
+                .data(root.leaves())
+                .enter().append("g")
+                .attr("transform", function (d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
+
+            cell.append("rect")
+                .attr("id", function (d) { return d.data.id; })
+                .attr("width", function (d) { return d.x1 - d.x0; })
+                .attr("height", function (d) { return d.y1 - d.y0; })
+                .attr("fill", function (d) { return color(d.parent.data.id); });
+
+            cell.append("clipPath")
+                .attr("id", function (d) { return "clip-" + d.data.id; })
+                .append("use")
+                .attr("xlink:href", function (d) { return "#" + d.data.id; });
+
+            cell.append("text")
+                .attr("clip-path", function (d) { return "url(#clip-" + d.data.id + ")"; })
+                .selectAll("tspan")
+                .data(function (d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g); })
+                .enter().append("tspan")
+                .attr("x", 5)
+                .attr("y", function (d, i) { return 20 + i * 15; })
+                .text(function (d) { return d; })
+                .style("fill", "white");
+
+            /*  d3.selectAll("input")
+                 .data(sumBySize, function (d) { return d ? d.name : this.value; })
+                 .data([sumBySize, sumByCount], function (d) { return d ? d.name : this.value; })
+                 .on("change", changed);
+ 
+             var timeout = d3.timeout(function () {
+                 d3.select("input[value=\"sumBySize\"]")
+                     .property("checked", true)
+                     .dispatch("change");
+             }, 2000);
+ 
+             function changed(sum) {
+                 timeout.stop();
+ 
+                 treemap(root.sum(sum));
+ 
+                 cell.transition()
+                     .duration(750)
+                     .attr("transform", function (d) { return "translate(" + d.x0 + "," + d.y0 + ")"; })
+                     .select("rect")
+                     .attr("width", function (d) { return d.x1 - d.x0; })
+                     .attr("height", function (d) { return d.y1 - d.y0; });
+             } */
+        });
+
+        function sumByCount(d) {
+            return d.children ? 0 : 1;
+        }
+
+        function sumBySize(d) {
+            return d.size;
+        }
+
+    </script>
+
+</body>
+<style>
+    #pingjun{
+        position: absolute;
+        z-index: 100;
+        top: 5%;
+        right: 5%;
+        height: 600px;
+        width: 800px;
+    }
+    .conpamyPic {
+        position: relative;
+        width: 185px;
+        height: 216px;
+        float: left;
+        margin-left: 10px;
+    }
+    
+    .conpamyPicHead{
+        max-width:185px;
+        position: absolute;
+        left: 0;
+    }
+    .conpamyPicCloth{
+        position: absolute;
+        max-width:185px;
+        bottom: 3%;
+        left: 0;
+
+
+    }
+    .conpamyPicGlass{
+        position: absolute;
+        max-width:155px;
+        top: 35%;
+        left: 8%;
+    }
+    .conpamyPicIcon{
+        position: absolute;
+        max-width:25px;
+        bottom: 5%;
+        right: 20%;
+    }
+    .conpamyPicHair{
+        position: absolute;
+        max-width:170px;
+        top: -1%;
+        left: 3.5%;
+    }
+
+</style>
+<style>
+    body {
+        background-color: #232322;
+    }
+
+    #force {
+        margin: 0 auto;
+        position: relative;
+    }
+</style>
+<style>
+    .filterBox {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 2%;
+        bottom: 10%;
+        z-index: 100;
+    }
+
+    .check_text {
+        font-size: 20px;
+    }
+</style>
+<style>
+    #leftQu{
+        position: absolute;
+        z-index: 10;
+        background-color: rgba(49, 185, 45, 0.658);
+        width: 700px;
+        height: 700px;
+        left: 2%;
+        opacity: 0.4;
+        
+    }
+    #rightQu{
+        position: absolute;
+        z-index: 10;
+        background-color: rgba(219, 34, 34, 0.966);
+        width: 700px;
+        height: 700px;
+        right: 2%; 
+        opacity: 0.4;
+    }
+
+
+    #CardBox {
+        position: absolute;
+        z-index: 100;
+        bottom: 1%;
+        right: 2%;
+        width: 500px;
+        height: 600px;
+        background-color: rgba(100, 100, 100, 0.966);
+        overflow-y: scroll;
+
+    }
+
+    #head {
+        padding-bottom: 10px;
+        border-bottom: black solid 4px;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+    }
+
+    .company {
+        margin: 10px 10px;
+        height: 400px;
+        background-color: black;
+        opacity: 1;
+    }
+
+    .companyHeader {
+        display: flex;
+        border-bottom: rgb(255, 255, 255) solid 4px;
+        /* line-height 和 height 保持一致即可实现文字垂直居中 */
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .companyName {
+        display: inline;
+        color: white;
+        background-color: rgb(53, 53, 53);
+        flex: 1;
+
+    }
+
+    .companyCanncel {
+        display: inline;
+    }
+
+    .companyBody {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+
+    }
+
+    .quarter {
+        float: left;
+    }
+
+    .pic {
+        width: 40%;
+        height: 54%;
+        background-color: #5BC0DE;
+        text-align: center;
+
+    }
+
+    .grades {
+        width: 60%;
+        height: 54%;
+        background-color: #a4aca4;
+
+    }
+
+    table {
+        table-layout: fixed;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+    td {
+        padding-top: 10px;
+    }
+
+    .barContainer {
+        width: 100%;
+        background-color: #ddd;
+    }
+
+    .skills {
+        text-align: right;
+        padding-right: 10px;
+        line-height: 20px;
+        color: white;
+    }
+
+    .XDPF {
+        width: 90%;
+        background-color: #03c9ec;
+    }
+
+    .XYPF {
+        width: 75%;
+        background-color: #03c9ec;
+    }
+
+    .ZHPF {
+        width: 66%;
+        background-color: #03c9ec;
+    }
+
+
+    .icons {
+        width: 40%;
+        height: 34%;
+        background-color: #F0AD4E;
+        clear: left;
+    }
+
+    .lables {
+        width: 60%;
+        height: 34%;
+        background-color: #FFC706;
+    }
+
+    .conpamyLable {
+        background-color: aquamarine;
+        text-align: center;
+        margin: 3px 10px;
+        font-size: 20px;
+        border-radius: 0 20% 20% 0/0 50% 50% 0;
+    }
+
+    .search {
+        position: absolute;
+        right: 2%;
+        z-index: 99;
+    }
+
+    .search .input_search {
+        font-size: 16px;
+        position: relative;
+        text-align: left;
+        text-indent: 5px;
+        width: 350px;
+        height: 25px;
+        border: 1px solid rgb(126, 126, 126);
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        /* background: rgba(0, 209, 112, 0.527); */
+    }
+
+    .search .input_search:focus {
+        outline: none;
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border: 1px solid rgb(24, 24, 24);
+
+
+    }
+
+    .search ul {
+        position: absolute;
+        display: block;
+        text-align: left;
+        width: 200px;
+        margin-top: 0px;
+        padding: 0;
+        list-style-type: none;
+        border: 1px solid rgb(24, 24, 24);
+        border-top: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        
+    }
+    
+    .search li {
+        background-color: rgba(235, 235, 235, 0.815);
+        padding-top: 5px;
+        padding-bottom: 2px;
+        margin: 0;
+        text-align: left;
+        text-indent: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .search li:hover {
+        background: rgb(241, 241, 241);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .search a {
+        text-decoration: none;
+        color: black;
+    }
+</style>
+<style>
+    #thumbnailBox {
+        /* background-color: rgba(100, 100, 100, 0.966); */
+        position: absolute;
+        z-index: 100;
+        top: 0.5%;
+        left: 1.5%;
+        width: 300px;
+        height: 300px;
+        opacity: 0.8;
+
+    }
+</style>
+
+</html>
+
+<!--
+    功能罗列；
+    分工不明确；
+    查询的知识图谱；
+    细致讨论任务点；
+ -->
